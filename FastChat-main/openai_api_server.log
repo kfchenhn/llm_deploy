@@ -1,0 +1,663 @@
+2024-06-18 11:54:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43724 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 14:51:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51948 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 14:52:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46526 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 14:52:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41130 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 15:22:52 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8003, controller_address='http://localhost:41001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-18 15:22:52 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m4022065[0m]
+2024-06-18 15:22:52 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 15:22:52 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 15:22:52 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8003[0m (Press CTRL+C to quit)
+2024-06-18 15:35:58 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-18 15:35:58 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-18 15:35:58 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-18 15:35:58 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m4022065[0m]
+2024-06-18 15:35:58 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 15:35:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-18 15:35:58 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-18 15:35:58 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 15:35:58 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-18 15:35:58 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-18 15:35:58 | ERROR | stderr | 
+2024-06-18 15:35:58 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-18 15:35:58 | ERROR | stderr | 
+2024-06-18 15:35:58 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 15:35:58 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-18 15:35:58 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-18 15:35:58 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-18 15:35:58 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-18 15:35:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-18 15:35:58 | ERROR | stderr |     server.run()
+2024-06-18 15:35:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-18 15:35:58 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-18 15:35:58 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 15:35:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-18 15:35:58 | ERROR | stderr |     return runner.run(main)
+2024-06-18 15:35:58 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-18 15:35:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-18 15:35:58 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-18 15:35:58 | ERROR | stderr | KeyboardInterrupt
+2024-06-18 15:36:09 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8003, controller_address='http://localhost:41001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-18 15:36:09 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m4042700[0m]
+2024-06-18 15:36:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 15:36:09 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 15:36:09 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8003[0m (Press CTRL+C to quit)
+2024-06-18 15:48:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40548 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 15:53:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52662 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:41:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48580 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:41:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53202 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:47:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45372 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:47:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55246 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:48:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52914 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:48:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51196 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:48:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51196 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:48:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51836 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:49:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54758 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:49:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54758 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:50:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36106 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:50:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:32964 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:51:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35866 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:51:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35866 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:51:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34110 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:52:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47080 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:52:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47080 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:52:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49090 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:53:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53906 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:53:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53906 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:53:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52164 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:54:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49370 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:54:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42086 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:54:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42086 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:54:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38230 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:54:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40516 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:55:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55372 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 16:57:11 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45712 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:14:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52356 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:15:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45526 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:15:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56902 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:15:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60696 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:16:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37024 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 17:16:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49246 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:19:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47896 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:19:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49806 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:20:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56816 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:21:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52454 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:21:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50678 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:22:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:57416 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:22:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:57416 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:22:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33434 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:22:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38878 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 17:22:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59118 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 18:39:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37514 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 18:48:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38520 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:02:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41614 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:02:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48882 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:02:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53846 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:02:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44750 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:03:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43968 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:03:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49074 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:03:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43456 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:03:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50130 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:04:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51276 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:04:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41316 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:04:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45428 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:04:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45002 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:04:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33474 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:05:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33484 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:05:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54258 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:05:16 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59894 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:05:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59900 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:05:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35754 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:05:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42030 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:05:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42036 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:05:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44912 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:05:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41908 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:06:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41924 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:06:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34500 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:06:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59916 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:06:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39382 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:07:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44886 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:07:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53178 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:07:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53194 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:07:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42384 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:07:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34980 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:07:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34994 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:08:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38634 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:08:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34438 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:08:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34448 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:08:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47594 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:08:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51432 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:08:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51438 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:08:51 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47178 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:08:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60494 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 19:09:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60496 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:09:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59952 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 19:09:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51142 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-18 20:52:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45484 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:52:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37162 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:52:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37210 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:53:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55452 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:53:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53836 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:54:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38074 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:54:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34296 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:55:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36500 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:55:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55316 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:56:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45378 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:56:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39012 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 20:57:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42410 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:09:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51562 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:10:51 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47428 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:11:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44812 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:11:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46598 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:12:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48434 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:13:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51648 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:13:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33104 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:13:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56238 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:14:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55506 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:14:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37590 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:14:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37598 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:15:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49002 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:15:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44666 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:15:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50790 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:16:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:35650 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:16:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54964 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:16:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33258 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:17:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50864 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:17:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43406 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:17:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44910 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:18:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48496 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:18:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36784 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:18:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56100 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:19:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53666 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:19:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50032 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:19:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39142 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:19:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49450 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:20:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36398 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:20:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38082 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:20:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52102 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:21:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37078 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:21:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58804 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:29:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:29:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:29:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:29:42 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:29:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:30:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:38:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:38:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:38:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:39:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:39:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:39:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:39:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:39:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:39:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:40:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:40:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:40:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:40:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:41:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:41:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:41:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:41:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:42:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:42:16 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:42:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:42:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:43:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:43:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:43:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:43:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:44:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:45:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:45:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:46:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:47:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:47:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:47:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:48:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:48:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:48:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:49:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:49:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:50:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:50:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:50:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:51:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:51:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:51:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:52:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:52:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:52:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:53:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:53:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:53:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:53:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:54:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:54:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:55:11 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:55:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:56:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:56:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:56:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:57:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:57:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:57:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:57:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:58:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:58:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:58:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:59:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 21:59:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:00:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:01:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:01:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:01:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:02:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:02:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:03:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:03:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:04:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:04:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:05:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:05:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:06:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:06:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:07:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:08:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:08:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:08:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:08:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:09:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:09:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:09:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:10:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:10:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:10:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:11:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:11:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:12:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:12:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:13:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:13:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:14:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:14:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:14:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:15:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:15:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:15:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:16:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:16:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:17:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:17:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:18:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:18:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:18:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:19:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:19:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:19:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:20:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:20:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:20:42 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:21:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:21:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:21:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:22:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:22:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:23:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:23:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:23:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:24:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:24:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:24:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:24:51 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:25:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:26:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:26:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:26:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:27:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:28:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:29:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:29:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:30:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:30:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:30:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:31:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:31:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:31:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:32:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:32:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:32:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:32:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:33:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:33:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:34:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:34:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:34:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:35:21 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:35:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:35:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:36:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:36:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:37:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:37:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:37:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:38:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:38:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:39:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:40:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:40:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:40:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:40:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:41:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:41:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:41:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:42:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:42:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:43:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:43:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:43:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:43:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:43:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:44:16 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:44:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:44:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:45:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:46:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:46:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:47:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:47:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:48:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:48:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:49:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:49:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:49:58 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:50:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:50:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:50:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:51:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:51:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:52:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:52:51 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:53:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:53:51 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:54:11 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:54:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:55:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:55:57 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:56:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:56:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:56:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:56:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:57:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:57:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:57:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:57:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:58:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:58:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:58:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:59:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 22:59:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:00:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:00:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:00:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:01:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:01:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:01:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:02:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:02:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:02:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:03:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:03:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:04:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:04:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37700 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:09:09 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-18 23:09:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-18 23:09:09 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-18 23:09:09 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m154408[0m]
+2024-06-18 23:09:09 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:09:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-18 23:09:09 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-18 23:09:09 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:09:09 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:09:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-18 23:09:09 | ERROR | stderr | 
+2024-06-18 23:09:09 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-18 23:09:09 | ERROR | stderr | 
+2024-06-18 23:09:09 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:09:09 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-18 23:09:09 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-18 23:09:09 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-18 23:09:09 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-18 23:09:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-18 23:09:09 | ERROR | stderr |     server.run()
+2024-06-18 23:09:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-18 23:09:09 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-18 23:09:09 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:09:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-18 23:09:09 | ERROR | stderr |     return runner.run(main)
+2024-06-18 23:09:09 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-18 23:09:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-18 23:09:09 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-18 23:09:09 | ERROR | stderr | KeyboardInterrupt
+2024-06-18 23:09:20 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-18 23:09:20 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m400366[0m]
+2024-06-18 23:09:20 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 23:09:20 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 23:09:20 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-18 23:10:35 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-18 23:10:35 | ERROR | stderr | [32mINFO[0m:     Waiting for connections to close. (CTRL+C to force quit)
+2024-06-18 23:14:59 | ERROR | stderr | [32mINFO[0m:     Waiting for background tasks to complete. (CTRL+C to force quit)
+2024-06-18 23:35:25 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m4042700[0m]
+2024-06-18 23:35:25 | ERROR | stderr | [31mERROR[0m:    Traceback (most recent call last):
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return runner.run(main)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-18 23:35:25 | ERROR | stderr |     with self.capture_signals():
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/contextlib.py", line 144, in __exit__
+2024-06-18 23:35:25 | ERROR | stderr |     next(self.gen)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-18 23:35:25 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 157, in _on_sigint
+2024-06-18 23:35:25 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-18 23:35:25 | ERROR | stderr | KeyboardInterrupt
+2024-06-18 23:35:25 | ERROR | stderr | 
+2024-06-18 23:35:25 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-18 23:35:25 | ERROR | stderr | 
+2024-06-18 23:35:25 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/routing.py", line 741, in lifespan
+2024-06-18 23:35:25 | ERROR | stderr |     await receive()
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+2024-06-18 23:35:25 | ERROR | stderr |     return await self.receive_queue.get()
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/queues.py", line 158, in get
+2024-06-18 23:35:25 | ERROR | stderr |     await getter
+2024-06-18 23:35:25 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-18 23:35:25 | ERROR | stderr | 
+2024-06-18 23:35:25 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-06-18 23:35:25 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return runner.run(main)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-18 23:35:25 | ERROR | stderr |     with self.capture_signals():
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/contextlib.py", line 144, in __exit__
+2024-06-18 23:35:25 | ERROR | stderr |     next(self.gen)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-18 23:35:25 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 157, in _on_sigint
+2024-06-18 23:35:25 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-18 23:35:25 | ERROR | stderr | KeyboardInterrupt
+2024-06-18 23:35:25 | ERROR | stderr | 
+2024-06-18 23:35:25 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-18 23:35:25 | ERROR | stderr | 
+2024-06-18 23:35:25 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+2024-06-18 23:35:25 | ERROR | stderr |     result = await app(  # type: ignore[func-returns-value]
+2024-06-18 23:35:25 | ERROR | stderr |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     return await self.app(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     await super().__call__(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     await self.app(scope, receive, _send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-18 23:35:25 | ERROR | stderr |     await app(scope, receive, sender)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+2024-06-18 23:35:25 | ERROR | stderr |     await self.middleware_stack(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+2024-06-18 23:35:25 | ERROR | stderr |     await route.handle(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+2024-06-18 23:35:25 | ERROR | stderr |     await self.app(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+2024-06-18 23:35:25 | ERROR | stderr |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-18 23:35:25 | ERROR | stderr |     await app(scope, receive, sender)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+2024-06-18 23:35:25 | ERROR | stderr |     response = await func(request)
+2024-06-18 23:35:25 | ERROR | stderr |                ^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+2024-06-18 23:35:25 | ERROR | stderr |     raw_response = await run_endpoint_function(
+2024-06-18 23:35:25 | ERROR | stderr |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+2024-06-18 23:35:25 | ERROR | stderr |     return await dependant.call(**values)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 414, in create_chat_completion
+2024-06-18 23:35:25 | ERROR | stderr |     error_check_ret = await check_model(request)
+2024-06-18 23:35:25 | ERROR | stderr |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 146, in check_model
+2024-06-18 23:35:25 | ERROR | stderr |     models = await fetch_remote(controller_address + "/list_models", None, "models")
+2024-06-18 23:35:25 | ERROR | stderr |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 75, in fetch_remote
+2024-06-18 23:35:25 | ERROR | stderr |     async with session.post(url, json=pload) as response:
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/aiohttp/client.py", line 1197, in __aenter__
+2024-06-18 23:35:25 | ERROR | stderr |     self._resp = await self._coro
+2024-06-18 23:35:25 | ERROR | stderr |                  ^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/aiohttp/client.py", line 608, in _request
+2024-06-18 23:35:25 | ERROR | stderr |     await resp.start(conn)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/aiohttp/client_reqrep.py", line 976, in start
+2024-06-18 23:35:25 | ERROR | stderr |     message, payload = await protocol.read()  # type: ignore[union-attr]
+2024-06-18 23:35:25 | ERROR | stderr |                        ^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/aiohttp/streams.py", line 640, in read
+2024-06-18 23:35:25 | ERROR | stderr |     await self._waiter
+2024-06-18 23:35:25 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-18 23:35:25 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:35:25 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-18 23:35:25 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-18 23:35:25 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-18 23:35:25 | ERROR | stderr |     server.run()
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return runner.run(main)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-18 23:35:25 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-18 23:35:25 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-18 23:35:25 | ERROR | stderr |     with self.capture_signals():
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/contextlib.py", line 144, in __exit__
+2024-06-18 23:35:25 | ERROR | stderr |     next(self.gen)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-18 23:35:25 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-18 23:35:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat-for-huatuo/lib/python3.11/asyncio/runners.py", line 157, in _on_sigint
+2024-06-18 23:35:25 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-18 23:35:25 | ERROR | stderr | KeyboardInterrupt
+2024-06-18 23:37:05 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8003, controller_address='http://localhost:41001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-18 23:37:05 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m439509[0m]
+2024-06-18 23:37:05 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 23:37:05 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 23:37:05 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8003[0m (Press CTRL+C to quit)
+2024-06-18 23:41:31 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-18 23:41:31 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-18 23:41:31 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-18 23:41:31 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m400366[0m]
+2024-06-18 23:41:31 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:41:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-18 23:41:31 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-18 23:41:31 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:41:31 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-18 23:41:31 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-18 23:41:31 | ERROR | stderr | 
+2024-06-18 23:41:31 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-18 23:41:31 | ERROR | stderr | 
+2024-06-18 23:41:31 | ERROR | stderr | Traceback (most recent call last):
+2024-06-18 23:41:31 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-18 23:41:31 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-18 23:41:31 | ERROR | stderr |   File "/home/c205/llm_serve_workspace_dev/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-18 23:41:31 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-18 23:41:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-18 23:41:31 | ERROR | stderr |     server.run()
+2024-06-18 23:41:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-18 23:41:31 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-18 23:41:31 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-18 23:41:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-18 23:41:31 | ERROR | stderr |     return runner.run(main)
+2024-06-18 23:41:31 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-18 23:41:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-18 23:41:31 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-18 23:41:31 | ERROR | stderr | KeyboardInterrupt
+2024-06-18 23:41:42 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-18 23:41:42 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m446694[0m]
+2024-06-18 23:41:42 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 23:41:42 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 23:41:42 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-18 23:42:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42026 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52736 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49532 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m

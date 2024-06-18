@@ -1,0 +1,45 @@
+2024-06-13 20:19:36 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=31002, worker_address='http://localhost:21002', controller_address='0.0.0.0:21002', model_path='/home/c205/workspace/models/Apollo-7B', revision='main', device='cuda', gpus=None, num_gpus=2, max_gpu_memory='20GiB', dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-06-13 20:19:36 | INFO | model_worker | Loading the model ['Apollo-7B'] on worker 0c71d326 ...
+2024-06-13 20:19:37 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+2024-06-13 20:19:37 | ERROR | stderr | Loading checkpoint shards:  12%|█▎        | 1/8 [00:00<00:05,  1.35it/s]
+2024-06-13 20:19:38 | ERROR | stderr | Loading checkpoint shards:  25%|██▌       | 2/8 [00:01<00:04,  1.45it/s]
+2024-06-13 20:19:39 | ERROR | stderr | Loading checkpoint shards:  38%|███▊      | 3/8 [00:02<00:03,  1.51it/s]
+2024-06-13 20:19:39 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 4/8 [00:02<00:02,  1.47it/s]
+2024-06-13 20:19:40 | ERROR | stderr | Loading checkpoint shards:  62%|██████▎   | 5/8 [00:03<00:01,  1.53it/s]
+2024-06-13 20:19:41 | ERROR | stderr | Loading checkpoint shards:  75%|███████▌  | 6/8 [00:03<00:01,  1.55it/s]
+2024-06-13 20:19:41 | ERROR | stderr | Loading checkpoint shards:  88%|████████▊ | 7/8 [00:04<00:00,  1.58it/s]
+2024-06-13 20:19:41 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 8/8 [00:04<00:00,  2.10it/s]
+2024-06-13 20:19:41 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 8/8 [00:04<00:00,  1.70it/s]
+2024-06-13 20:19:41 | ERROR | stderr | 
+2024-06-13 20:19:41 | INFO | model_worker | Register to controller
+2024-06-13 20:19:41 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 20:19:41 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-13 20:19:41 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 414, in <module>
+2024-06-13 20:19:41 | ERROR | stderr |     args, worker = create_model_worker()
+2024-06-13 20:19:41 | ERROR | stderr |                    ^^^^^^^^^^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 385, in create_model_worker
+2024-06-13 20:19:41 | ERROR | stderr |     worker = ModelWorker(
+2024-06-13 20:19:41 | ERROR | stderr |              ^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 102, in __init__
+2024-06-13 20:19:41 | ERROR | stderr |     self.init_heart_beat()
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/base_model_worker.py", line 81, in init_heart_beat
+2024-06-13 20:19:41 | ERROR | stderr |     self.register_to_controller()
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/base_model_worker.py", line 99, in register_to_controller
+2024-06-13 20:19:41 | ERROR | stderr |     r = requests.post(url, json=data)
+2024-06-13 20:19:41 | ERROR | stderr |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/requests/api.py", line 115, in post
+2024-06-13 20:19:41 | ERROR | stderr |     return request("post", url, data=data, json=json, **kwargs)
+2024-06-13 20:19:41 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/requests/api.py", line 59, in request
+2024-06-13 20:19:41 | ERROR | stderr |     return session.request(method=method, url=url, **kwargs)
+2024-06-13 20:19:41 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+2024-06-13 20:19:41 | ERROR | stderr |     resp = self.send(prep, **send_kwargs)
+2024-06-13 20:19:41 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/requests/sessions.py", line 697, in send
+2024-06-13 20:19:41 | ERROR | stderr |     adapter = self.get_adapter(url=request.url)
+2024-06-13 20:19:41 | ERROR | stderr |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-13 20:19:41 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/requests/sessions.py", line 792, in get_adapter
+2024-06-13 20:19:41 | ERROR | stderr |     raise InvalidSchema(f"No connection adapters were found for {url!r}")
+2024-06-13 20:19:41 | ERROR | stderr | requests.exceptions.InvalidSchema: No connection adapters were found for '0.0.0.0:21002/register_worker'

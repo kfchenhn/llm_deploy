@@ -1,0 +1,20 @@
+2024-06-13 20:25:05 | INFO | model_worker | args: Namespace(host='0.0.0.0', port=31002, worker_address='http://localhost:21002', controller_address='http://0.0.0.0:21002', model_path='/home/c205/workspace/models/Apollo-7B', revision='main', device='cuda', gpus=None, num_gpus=2, max_gpu_memory='20GiB', dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-06-13 20:25:05 | INFO | model_worker | Loading the model ['Apollo-7B'] on worker 064d75f7 ...
+2024-06-13 20:25:05 | ERROR | stderr | Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+2024-06-13 20:25:06 | ERROR | stderr | Loading checkpoint shards:  12%|█▎        | 1/8 [00:00<00:04,  1.46it/s]
+2024-06-13 20:25:06 | ERROR | stderr | Loading checkpoint shards:  25%|██▌       | 2/8 [00:01<00:03,  1.59it/s]
+2024-06-13 20:25:07 | ERROR | stderr | Loading checkpoint shards:  38%|███▊      | 3/8 [00:01<00:03,  1.61it/s]
+2024-06-13 20:25:08 | ERROR | stderr | Loading checkpoint shards:  50%|█████     | 4/8 [00:02<00:02,  1.53it/s]
+2024-06-13 20:25:08 | ERROR | stderr | Loading checkpoint shards:  62%|██████▎   | 5/8 [00:03<00:01,  1.59it/s]
+2024-06-13 20:25:09 | ERROR | stderr | Loading checkpoint shards:  75%|███████▌  | 6/8 [00:03<00:01,  1.59it/s]
+2024-06-13 20:25:10 | ERROR | stderr | Loading checkpoint shards:  88%|████████▊ | 7/8 [00:04<00:00,  1.60it/s]
+2024-06-13 20:25:10 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 8/8 [00:04<00:00,  2.13it/s]
+2024-06-13 20:25:10 | ERROR | stderr | Loading checkpoint shards: 100%|██████████| 8/8 [00:04<00:00,  1.76it/s]
+2024-06-13 20:25:10 | ERROR | stderr | 
+2024-06-13 20:25:10 | INFO | model_worker | Register to controller
+2024-06-13 20:25:10 | ERROR | stderr | INFO:     Started server process [3213247]
+2024-06-13 20:25:10 | ERROR | stderr | INFO:     Waiting for application startup.
+2024-06-13 20:25:10 | ERROR | stderr | INFO:     Application startup complete.
+2024-06-13 20:25:10 | ERROR | stderr | ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 31002): address already in use
+2024-06-13 20:25:10 | ERROR | stderr | INFO:     Waiting for application shutdown.
+2024-06-13 20:25:10 | ERROR | stderr | INFO:     Application shutdown complete.

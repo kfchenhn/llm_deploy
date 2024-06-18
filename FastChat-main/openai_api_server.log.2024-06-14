@@ -1,0 +1,814 @@
+2024-06-15 10:09:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60744 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:09:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44558 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:09:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59854 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:10:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52130 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:10:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44996 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:11:08 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60014 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:11:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33022 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:23:30 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:23:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:23:30 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:23:30 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m6559[0m]
+2024-06-15 10:23:30 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:23:30 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:23:30 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:23:30 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:23:30 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:23:30 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:23:30 | ERROR | stderr | 
+2024-06-15 10:23:30 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:23:30 | ERROR | stderr | 
+2024-06-15 10:23:30 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:23:30 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:23:30 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:23:30 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:23:30 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:23:30 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:23:30 | ERROR | stderr |     server.run()
+2024-06-15 10:23:30 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:23:30 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:23:30 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:23:30 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:23:30 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:23:30 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:23:30 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:23:30 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:23:30 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:24:59 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:24:59 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m116073[0m]
+2024-06-15 10:24:59 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:24:59 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:24:59 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:25:01 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:25:01 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:25:01 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:25:01 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m116073[0m]
+2024-06-15 10:25:01 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:25:01 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:25:01 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:25:01 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:25:01 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:25:01 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:25:01 | ERROR | stderr | 
+2024-06-15 10:25:01 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:25:01 | ERROR | stderr | 
+2024-06-15 10:25:01 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:25:01 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:25:01 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:25:01 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:25:01 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:25:01 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:25:01 | ERROR | stderr |     server.run()
+2024-06-15 10:25:01 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:25:01 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:25:01 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:25:01 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:25:01 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:25:01 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:25:01 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:25:01 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:25:01 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:25:06 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:25:06 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m116843[0m]
+2024-06-15 10:25:06 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:25:06 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:25:06 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:26:09 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:26:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:26:09 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:26:09 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m116843[0m]
+2024-06-15 10:26:09 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:26:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:26:09 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:26:09 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:26:09 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:26:09 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:26:09 | ERROR | stderr | 
+2024-06-15 10:26:09 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:26:09 | ERROR | stderr | 
+2024-06-15 10:26:09 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:26:09 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:26:09 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:26:09 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:26:09 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:26:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:26:09 | ERROR | stderr |     server.run()
+2024-06-15 10:26:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:26:09 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:26:09 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:26:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:26:09 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:26:09 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:26:09 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:26:09 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:26:09 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:27:52 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:27:52 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m122177[0m]
+2024-06-15 10:27:52 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:27:52 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:27:52 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:28:05 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m122177[0m]
+2024-06-15 10:28:06 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:06 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:28:06 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:28:06 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:06 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:28:06 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:28:06 | ERROR | stderr | 
+2024-06-15 10:28:06 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:28:06 | ERROR | stderr | 
+2024-06-15 10:28:06 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:06 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:28:06 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:28:06 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:28:06 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:28:06 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:28:06 | ERROR | stderr |     server.run()
+2024-06-15 10:28:06 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:28:06 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:28:06 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:06 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:28:06 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:28:06 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:28:06 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:28:06 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:28:06 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:28:06 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m123039[0m]
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:28:06 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m123039[0m]
+2024-06-15 10:28:11 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:28:11 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:28:11 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:11 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:28:11 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:28:11 | ERROR | stderr | 
+2024-06-15 10:28:11 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:28:11 | ERROR | stderr | 
+2024-06-15 10:28:11 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:11 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:28:11 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:28:11 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:28:11 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:28:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:28:11 | ERROR | stderr |     server.run()
+2024-06-15 10:28:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:28:11 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:28:11 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:28:11 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:28:11 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:28:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:28:11 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:28:11 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:28:11 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m123523[0m]
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:28:11 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:28:14 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:28:14 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:28:14 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:28:14 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m123523[0m]
+2024-06-15 10:28:14 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:28:14 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:28:14 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:28:14 | ERROR | stderr | 
+2024-06-15 10:28:14 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:28:14 | ERROR | stderr | 
+2024-06-15 10:28:14 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:28:14 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:28:14 | ERROR | stderr |     server.run()
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:28:14 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:28:14 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:28:14 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:28:14 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:28:15 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:28:15 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m123888[0m]
+2024-06-15 10:28:15 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:28:15 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:28:15 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m123888[0m]
+2024-06-15 10:28:19 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:19 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:28:19 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:28:19 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:19 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:28:19 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:28:19 | ERROR | stderr | 
+2024-06-15 10:28:19 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:28:19 | ERROR | stderr | 
+2024-06-15 10:28:19 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:19 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:28:19 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:28:19 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:28:19 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:28:19 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:28:19 | ERROR | stderr |     server.run()
+2024-06-15 10:28:19 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:28:19 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:28:19 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:19 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:28:19 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:28:19 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:28:19 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:28:19 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:28:19 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:28:19 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m124356[0m]
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:28:19 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:28:21 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:28:21 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:28:21 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:28:21 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m124356[0m]
+2024-06-15 10:28:21 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:21 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:28:21 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:28:21 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:21 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:28:21 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:28:21 | ERROR | stderr | 
+2024-06-15 10:28:21 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:28:21 | ERROR | stderr | 
+2024-06-15 10:28:21 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:21 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:28:21 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:28:21 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:28:21 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:28:21 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:28:21 | ERROR | stderr |     server.run()
+2024-06-15 10:28:21 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:28:21 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:28:21 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:21 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:28:21 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:28:21 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:28:21 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:28:21 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:28:21 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:28:22 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:28:22 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m124729[0m]
+2024-06-15 10:28:22 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:28:22 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:28:22 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m124729[0m]
+2024-06-15 10:29:47 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:29:47 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:29:47 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:29:47 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:29:47 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:29:47 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:29:47 | ERROR | stderr | 
+2024-06-15 10:29:47 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:29:47 | ERROR | stderr | 
+2024-06-15 10:29:47 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:29:47 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:29:47 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:29:47 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:29:47 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:29:47 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:29:47 | ERROR | stderr |     server.run()
+2024-06-15 10:29:47 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:29:47 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:29:47 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:29:47 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:29:47 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:29:47 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:29:47 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:29:47 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:29:47 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:29:47 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m126996[0m]
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:29:47 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:29:50 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:29:50 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:29:50 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:29:50 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m126996[0m]
+2024-06-15 10:29:50 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:29:50 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:29:50 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:29:50 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:29:50 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:29:50 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:29:50 | ERROR | stderr | 
+2024-06-15 10:29:50 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:29:50 | ERROR | stderr | 
+2024-06-15 10:29:50 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:29:50 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:29:50 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:29:50 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:29:50 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:29:50 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:29:50 | ERROR | stderr |     server.run()
+2024-06-15 10:29:50 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:29:50 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:29:50 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:29:50 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:29:50 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:29:50 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:29:50 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:29:50 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:29:50 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:29:51 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:29:51 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m127386[0m]
+2024-06-15 10:29:51 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:29:51 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:29:51 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m127386[0m]
+2024-06-15 10:29:52 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:29:52 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:29:52 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:29:52 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:29:52 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:29:52 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:29:52 | ERROR | stderr | 
+2024-06-15 10:29:52 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:29:52 | ERROR | stderr | 
+2024-06-15 10:29:52 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:29:52 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:29:52 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:29:52 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:29:52 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:29:52 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:29:52 | ERROR | stderr |     server.run()
+2024-06-15 10:29:52 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:29:52 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:29:52 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:29:52 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:29:52 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:29:52 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:29:52 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:29:52 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:29:52 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:29:52 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m127706[0m]
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:29:52 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:30:28 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:30:28 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:30:28 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:30:28 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m127706[0m]
+2024-06-15 10:30:28 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:30:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:30:28 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:30:28 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:30:28 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:30:28 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:30:28 | ERROR | stderr | 
+2024-06-15 10:30:28 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:30:28 | ERROR | stderr | 
+2024-06-15 10:30:28 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:30:28 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:30:28 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:30:28 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:30:28 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:30:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:30:28 | ERROR | stderr |     server.run()
+2024-06-15 10:30:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:30:28 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:30:28 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:30:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:30:28 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:30:28 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:30:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:30:28 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:30:28 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:30:29 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:30:29 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m128900[0m]
+2024-06-15 10:30:29 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:30:29 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:30:29 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:31:14 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:31:14 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:31:14 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:31:14 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m128900[0m]
+2024-06-15 10:31:14 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:31:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:31:14 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:31:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:31:14 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:31:14 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:31:14 | ERROR | stderr | 
+2024-06-15 10:31:14 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:31:14 | ERROR | stderr | 
+2024-06-15 10:31:14 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:31:14 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:31:14 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:31:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:31:14 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:31:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:31:14 | ERROR | stderr |     server.run()
+2024-06-15 10:31:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:31:14 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:31:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:31:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:31:14 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:31:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:31:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:31:14 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:31:14 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:31:20 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:31:20 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m130458[0m]
+2024-06-15 10:31:20 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:31:20 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:31:20 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:31:58 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:31:58 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:31:58 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:31:58 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m130458[0m]
+2024-06-15 10:31:58 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:31:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:31:58 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:31:58 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:31:58 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:31:58 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:31:58 | ERROR | stderr | 
+2024-06-15 10:31:58 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:31:58 | ERROR | stderr | 
+2024-06-15 10:31:58 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:31:58 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:31:58 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:31:58 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:31:58 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:31:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:31:58 | ERROR | stderr |     server.run()
+2024-06-15 10:31:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:31:58 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:31:58 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:31:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:31:58 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:31:58 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:31:58 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:31:58 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:31:58 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:32:08 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:32:08 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m132245[0m]
+2024-06-15 10:32:08 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:32:08 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:32:08 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:32:46 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:32:46 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:32:46 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:32:46 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m132245[0m]
+2024-06-15 10:32:46 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:32:46 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:32:46 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:32:46 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:32:46 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:32:46 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:32:46 | ERROR | stderr | 
+2024-06-15 10:32:46 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:32:46 | ERROR | stderr | 
+2024-06-15 10:32:46 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:32:46 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:32:46 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:32:46 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:32:46 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:32:46 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:32:46 | ERROR | stderr |     server.run()
+2024-06-15 10:32:46 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:32:46 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:32:46 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:32:46 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:32:46 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:32:46 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:32:46 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:32:46 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:32:46 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:32:57 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:32:57 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m133854[0m]
+2024-06-15 10:32:57 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:32:57 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:32:57 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:34:36 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:34:36 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:34:36 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:34:36 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m133854[0m]
+2024-06-15 10:34:36 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:34:36 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:34:36 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:34:36 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:34:36 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:34:36 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:34:36 | ERROR | stderr | 
+2024-06-15 10:34:36 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:34:36 | ERROR | stderr | 
+2024-06-15 10:34:36 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:34:36 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:34:36 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:34:36 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:34:36 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:34:36 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:34:36 | ERROR | stderr |     server.run()
+2024-06-15 10:34:36 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:34:36 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:34:36 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:34:36 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:34:36 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:34:36 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:34:36 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:34:36 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:34:36 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:34:46 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:34:46 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m136901[0m]
+2024-06-15 10:34:46 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:34:46 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:34:46 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:35:15 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:35:16 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:35:16 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:35:16 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m136901[0m]
+2024-06-15 10:35:16 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:35:16 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:35:16 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:35:16 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:35:16 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:35:16 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:35:16 | ERROR | stderr | 
+2024-06-15 10:35:16 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:35:16 | ERROR | stderr | 
+2024-06-15 10:35:16 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:35:16 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:35:16 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:35:16 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:35:16 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:35:16 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:35:16 | ERROR | stderr |     server.run()
+2024-06-15 10:35:16 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:35:16 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:35:16 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:35:16 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:35:16 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:35:16 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:35:16 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:35:16 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:35:16 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:35:26 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:35:26 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m139154[0m]
+2024-06-15 10:35:26 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:35:26 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:35:26 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:38:18 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:38:18 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:38:18 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:38:18 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m139154[0m]
+2024-06-15 10:38:18 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:38:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:38:18 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:38:18 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:38:18 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:38:18 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:38:18 | ERROR | stderr | 
+2024-06-15 10:38:18 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:38:18 | ERROR | stderr | 
+2024-06-15 10:38:18 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:38:18 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:38:18 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:38:18 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:38:18 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:38:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:38:18 | ERROR | stderr |     server.run()
+2024-06-15 10:38:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:38:18 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:38:18 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:38:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:38:18 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:38:18 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:38:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:38:18 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:38:18 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:38:51 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:38:51 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m144526[0m]
+2024-06-15 10:38:51 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:38:51 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:38:51 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:40:08 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:40:08 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:40:08 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:40:08 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m144526[0m]
+2024-06-15 10:40:08 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:40:08 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:40:08 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:40:08 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:40:08 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:40:08 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:40:08 | ERROR | stderr | 
+2024-06-15 10:40:08 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:40:08 | ERROR | stderr | 
+2024-06-15 10:40:08 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:40:08 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:40:08 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:40:08 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:40:08 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:40:08 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:40:08 | ERROR | stderr |     server.run()
+2024-06-15 10:40:08 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:40:08 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:40:08 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:40:08 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:40:08 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:40:08 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:40:08 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:40:08 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:40:08 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:40:19 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:40:19 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m146910[0m]
+2024-06-15 10:40:19 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:40:19 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:40:19 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:40:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60676 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:41:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49464 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:43:28 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:43:28 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:43:28 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:43:28 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m146910[0m]
+2024-06-15 10:43:28 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:43:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:43:28 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:43:28 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:43:28 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:43:28 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:43:28 | ERROR | stderr | 
+2024-06-15 10:43:28 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:43:28 | ERROR | stderr | 
+2024-06-15 10:43:28 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:43:28 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:43:28 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:43:28 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:43:28 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:43:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:43:28 | ERROR | stderr |     server.run()
+2024-06-15 10:43:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:43:28 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:43:28 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:43:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:43:28 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:43:28 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:43:28 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:43:28 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:43:28 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:43:39 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:43:39 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m151975[0m]
+2024-06-15 10:43:39 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:43:39 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:43:39 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:44:58 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-15 10:44:59 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-15 10:44:59 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-15 10:44:59 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m151975[0m]
+2024-06-15 10:44:59 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:44:59 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
+2024-06-15 10:44:59 | ERROR | stderr |     return self._loop.run_until_complete(task)
+2024-06-15 10:44:59 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:44:59 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+2024-06-15 10:44:59 | ERROR | stderr | asyncio.exceptions.CancelledError
+2024-06-15 10:44:59 | ERROR | stderr | 
+2024-06-15 10:44:59 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-15 10:44:59 | ERROR | stderr | 
+2024-06-15 10:44:59 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:44:59 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:44:59 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:44:59 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/openai_api_server.py", line 939, in <module>
+2024-06-15 10:44:59 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-15 10:44:59 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
+2024-06-15 10:44:59 | ERROR | stderr |     server.run()
+2024-06-15 10:44:59 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+2024-06-15 10:44:59 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-15 10:44:59 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:44:59 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
+2024-06-15 10:44:59 | ERROR | stderr |     return runner.run(main)
+2024-06-15 10:44:59 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
+2024-06-15 10:44:59 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
+2024-06-15 10:44:59 | ERROR | stderr |     raise KeyboardInterrupt()
+2024-06-15 10:44:59 | ERROR | stderr | KeyboardInterrupt
+2024-06-15 10:45:09 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://localhost:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-15 10:45:09 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m154408[0m]
+2024-06-15 10:45:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-15 10:45:09 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-15 10:45:09 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-15 10:45:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36586 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:45:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56570 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:46:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40880 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:55:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58200 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:55:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58200 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:55:23 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58200 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:55:34 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50022 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:55:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46896 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:56:09 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37892 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:56:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43062 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:56:44 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51016 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 10:57:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52714 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 11:07:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47144 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 11:07:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47290 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 11:08:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60892 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 11:10:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42624 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:31:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51798 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:31:29 | INFO | stdout | [32mINFO[0m:     127.0.0.1:57776 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:32:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38694 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:33:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55124 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:33:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59954 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:33:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48188 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:34:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48596 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:35:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47188 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:36:01 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36516 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:39:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45916 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:40:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47824 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:40:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53614 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:42:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56948 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:42:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42420 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:42:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58182 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:44:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48254 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:44:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38368 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:46:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59132 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:48:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51132 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:48:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44582 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 17:55:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45784 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:06:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40834 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:06:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36268 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:14:55 | INFO | stdout | [32mINFO[0m:     127.0.0.1:50586 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:15:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59012 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:15:22 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49490 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:15:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43744 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:15:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38846 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:16:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:16:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41978 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:16:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37880 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:17:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44688 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:17:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33620 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:23:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47528 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:23:43 | INFO | stdout | [32mINFO[0m:     127.0.0.1:47528 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:26:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34944 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:27:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59468 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:27:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59468 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 18:28:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36920 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:38:16 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53474 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:38:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59592 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:38:39 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56098 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:39:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37082 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:39:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46002 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:43:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38934 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:43:06 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38934 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:43:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38934 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:48:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56642 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:49:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49650 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:50:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54602 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:50:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54602 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:50:46 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52884 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:52:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43732 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:52:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:39180 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:53:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49486 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:54:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36360 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:56:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:41550 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:57:18 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54438 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 19:57:24 | INFO | stdout | [32mINFO[0m:     127.0.0.1:54438 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:00:54 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53930 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:01:00 | INFO | stdout | [32mINFO[0m:     127.0.0.1:53936 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:05:26 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58150 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:05:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51874 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:05:42 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51890 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:05:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51890 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:08:15 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59510 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:08:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59510 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:11 | INFO | stdout | [32mINFO[0m:     127.0.0.1:56154 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38162 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:38174 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:47 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51818 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51818 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51824 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:51 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51818 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-15 20:09:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51824 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m

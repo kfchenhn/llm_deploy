@@ -1,0 +1,40 @@
+2024-06-18 23:36:46 | INFO | model_worker | args: Namespace(host='localhost', port=41002, worker_address='http://localhost:41002', controller_address='http://localhost:41001', model_path='/home/c205/workspace/models/HuatuoGPT2-13B/', revision='main', device='cuda', gpus=None, num_gpus=2, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-06-18 23:36:46 | INFO | model_worker | Loading the model ['HuatuoGPT2-13B'] on worker 43b24beb ...
+2024-06-18 23:36:52 | INFO | model_worker | Register to controller
+2024-06-18 23:36:52 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m438720[0m]
+2024-06-18 23:36:52 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 23:36:52 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 23:36:52 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:41002[0m (Press CTRL+C to quit)
+2024-06-18 23:37:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:38:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:39:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:39:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:40:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:41:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:42:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: None. call_ct: 0. worker_id: 43b24beb. 
+2024-06-18 23:42:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44310 - "[1mPOST /worker_get_conv_template HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44318 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:36 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44332 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:37 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44346 - "[1mPOST /worker_generate_stream HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:43:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:44:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:45:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:45:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:46:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:47:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:48:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:48:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:49:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:50:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:51:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:51:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:52:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:53:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:54:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:54:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:55:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:56:22 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:57:07 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:57:52 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 
+2024-06-18 23:58:37 | INFO | model_worker | Send heart beat. Models: ['HuatuoGPT2-13B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: 43b24beb. 

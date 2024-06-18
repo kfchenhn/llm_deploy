@@ -1,0 +1,66 @@
+2024-06-15 10:28:13 | INFO | model_worker | args: Namespace(host='localhost', port=31002, worker_address='http://localhost:31002', controller_address='http://localhost:31001', model_path='/home/c205/workspace/models/Apollo-7B/', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-06-15 10:28:13 | INFO | model_worker | Loading the model ['Apollo-7B'] on worker 1b43c3ad ...
+2024-06-15 10:28:14 | ERROR | stderr | Traceback (most recent call last):
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 414, in <module>
+2024-06-15 10:28:14 | ERROR | stderr |     args, worker = create_model_worker()
+2024-06-15 10:28:14 | ERROR | stderr |                    ^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 385, in create_model_worker
+2024-06-15 10:28:14 | ERROR | stderr |     worker = ModelWorker(
+2024-06-15 10:28:14 | ERROR | stderr |              ^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 77, in __init__
+2024-06-15 10:28:14 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2024-06-15 10:28:14 | ERROR | stderr |                                  ^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/model/model_adapter.py", line 362, in load_model
+2024-06-15 10:28:14 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2024-06-15 10:28:14 | ERROR | stderr |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/model/model_adapter.py", line 108, in load_model
+2024-06-15 10:28:14 | ERROR | stderr |     model = AutoModelForCausalLM.from_pretrained(
+2024-06-15 10:28:14 | ERROR | stderr |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 540, in from_pretrained
+2024-06-15 10:28:14 | ERROR | stderr |     has_local_code = type(config) in cls._model_mapping.keys()
+2024-06-15 10:28:14 | ERROR | stderr |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 751, in keys
+2024-06-15 10:28:14 | ERROR | stderr |     mapping_keys = [
+2024-06-15 10:28:14 | ERROR | stderr |                    ^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 752, in <listcomp>
+2024-06-15 10:28:14 | ERROR | stderr |     self._load_attr_from_module(key, name)
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 748, in _load_attr_from_module
+2024-06-15 10:28:14 | ERROR | stderr |     return getattribute_from_module(self._modules[module_name], attr)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/models/auto/auto_factory.py", line 692, in getattribute_from_module
+2024-06-15 10:28:14 | ERROR | stderr |     if hasattr(module, attr):
+2024-06-15 10:28:14 | ERROR | stderr |        ^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1525, in __getattr__
+2024-06-15 10:28:14 | ERROR | stderr |     module = self._get_module(self._class_to_module[name])
+2024-06-15 10:28:14 | ERROR | stderr |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 1535, in _get_module
+2024-06-15 10:28:14 | ERROR | stderr |     return importlib.import_module("." + module_name, self.__name__)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2024-06-15 10:28:14 | ERROR | stderr |     return _bootstrap._gcd_import(name[level:], package, level)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2024-06-15 10:28:14 | ERROR | stderr |   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/models/bart/configuration_bart.py", line 27, in <module>
+2024-06-15 10:28:14 | ERROR | stderr |     logger = logging.get_logger(__name__)
+2024-06-15 10:28:14 | ERROR | stderr |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/transformers/utils/logging.py", line 159, in get_logger
+2024-06-15 10:28:14 | ERROR | stderr |     return logging.getLogger(name)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/logging/__init__.py", line 2082, in getLogger
+2024-06-15 10:28:14 | ERROR | stderr |     return Logger.manager.getLogger(name)
+2024-06-15 10:28:14 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/logging/__init__.py", line 1356, in getLogger
+2024-06-15 10:28:14 | ERROR | stderr |     self._fixupParents(rv)
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/logging/__init__.py", line 1396, in _fixupParents
+2024-06-15 10:28:14 | ERROR | stderr |     obj.append(alogger)
+2024-06-15 10:28:14 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/logging/__init__.py", line 1273, in append
+2024-06-15 10:28:14 | ERROR | stderr |     def append(self, alogger):
+2024-06-15 10:28:14 | ERROR | stderr | 
+2024-06-15 10:28:14 | ERROR | stderr | KeyboardInterrupt

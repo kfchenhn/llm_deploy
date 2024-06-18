@@ -1,0 +1,82 @@
+2024-06-18 23:41:43 | INFO | model_worker | args: Namespace(host='localhost', port=31002, worker_address='http://localhost:31002', controller_address='http://localhost:31001', model_path='/home/c205/workspace/models/Apollo-7B/', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
+2024-06-18 23:41:43 | INFO | model_worker | Loading the model ['Apollo-7B'] on worker f815d7de ...
+2024-06-18 23:41:44 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                                                                                       | 0/8 [00:00<?, ?it/s]
+2024-06-18 23:41:44 | ERROR | stderr | Loading checkpoint shards:  12%|███████████████▉                                                                                                               | 1/8 [00:00<00:02,  3.19it/s]
+2024-06-18 23:41:44 | ERROR | stderr | Loading checkpoint shards:  25%|███████████████████████████████▊                                                                                               | 2/8 [00:00<00:01,  3.21it/s]
+2024-06-18 23:41:44 | ERROR | stderr | Loading checkpoint shards:  38%|███████████████████████████████████████████████▋                                                                               | 3/8 [00:00<00:01,  3.17it/s]
+2024-06-18 23:41:45 | ERROR | stderr | Loading checkpoint shards:  50%|███████████████████████████████████████████████████████████████▌                                                               | 4/8 [00:01<00:01,  3.19it/s]
+2024-06-18 23:41:45 | ERROR | stderr | Loading checkpoint shards:  62%|███████████████████████████████████████████████████████████████████████████████▍                                               | 5/8 [00:01<00:00,  3.21it/s]
+2024-06-18 23:41:45 | ERROR | stderr | Loading checkpoint shards:  75%|███████████████████████████████████████████████████████████████████████████████████████████████▎                               | 6/8 [00:01<00:00,  3.18it/s]
+2024-06-18 23:41:46 | ERROR | stderr | Loading checkpoint shards:  88%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████▏               | 7/8 [00:02<00:00,  3.20it/s]
+2024-06-18 23:41:46 | ERROR | stderr | Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:02<00:00,  3.52it/s]
+2024-06-18 23:41:46 | ERROR | stderr | 
+2024-06-18 23:41:48 | INFO | model_worker | Register to controller
+2024-06-18 23:41:48 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m446824[0m]
+2024-06-18 23:41:48 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-18 23:41:48 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-18 23:41:48 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:31002[0m (Press CTRL+C to quit)
+2024-06-18 23:42:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55056 - "[1mPOST /worker_get_conv_template HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55062 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55072 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:55082 - "[1mPOST /worker_generate_stream HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:42:33 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: f815d7de. 
+2024-06-18 23:43:18 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: f815d7de. 
+2024-06-18 23:43:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45674 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:43:52 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45690 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45702 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43930 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43938 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:03 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=4, locked=False). call_ct: 3. worker_id: f815d7de. 
+2024-06-18 23:44:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43948 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58840 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58850 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58860 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58866 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:20 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58876 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58886 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42104 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:30 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42108 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:42112 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43638 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:40 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43648 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:48 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=4, locked=False). call_ct: 7. worker_id: f815d7de. 
+2024-06-18 23:44:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43650 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37830 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:44:49 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37832 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37838 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36432 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:04 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36442 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36454 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36456 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:10 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36468 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36482 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60326 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60336 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:60344 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58082 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:28 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58088 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:33 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=4, locked=False). call_ct: 12. worker_id: f815d7de. 
+2024-06-18 23:45:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58104 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58956 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58972 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58974 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58988 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59000 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:45:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59010 - "[1mPOST /worker_generate HTTP/1.1[0m" [32m200 OK[0m
+2024-06-18 23:46:18 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:47:03 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:47:48 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:48:33 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:49:18 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:50:03 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:50:48 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:51:33 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:52:18 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:53:03 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:53:48 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:54:33 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:55:18 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:56:03 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:56:48 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:57:33 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
+2024-06-18 23:58:18 | INFO | model_worker | Send heart beat. Models: ['Apollo-7B']. Semaphore: Semaphore(value=5, locked=False). call_ct: 14. worker_id: f815d7de. 
