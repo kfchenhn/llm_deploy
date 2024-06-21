@@ -79,12 +79,12 @@ class FaissClient:
         if filter is None:
             filter = {}
         debug_logger.info(f'FAISS search: {query}, {filter}, {top_k}')
-        docs_with_score = await self.faiss_client.asimilarity_search_with_score(query, k=top_k, filter=filter,
-                                                                                fetch_k=200)
-        debug_logger.info(f'FAISS search result number: {len(docs_with_score)}')
-        for doc, score in docs_with_score:
-            doc.metadata['score'] = score
-        docs = [doc for doc, score in docs_with_score]
+        # docs_with_score = await self.faiss_client.asimilarity_search_with_score(query, k=top_k, filter=filter,fetch_k=200)
+        # debug_logger.info(f'FAISS search result number: {len(docs_with_score)}')
+        # for doc, score in docs_with_score:
+        #     doc.metadata['score'] = score
+        # docs = [doc for doc, score in docs_with_score]
+        docs=list(self.faiss_client.docstore._dict.values())
         docs_with_score = self.merge_docs(docs)
         return docs_with_score
 

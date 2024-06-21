@@ -54,6 +54,6 @@ done
 # Send Commmands on a per Screen Basis
 screen -DRRS controller3 -X stuff "python3 -m fastchat.serve.controller --port 41001 \r"
 # screen -DRRS worker-d0 -X stuff  "CUDA_VISIBLE_DEVICES=2 python3 -m fastchat.serve.model_worker --model-path $MODEL_PATH  --conv-template one_shot --limit-worker-concurrency 1  \r"
-screen -DRRS worker-d3 -X stuff  "CUDA_VISIBLE_DEVICES=2,3 python3 -m fastchat.serve.model_worker --model-path $MODEL_PATH --port 41002 --worker-address http://localhost:41002 --controller-address  http://localhost:41001 --num_gpus 2 \r"
+screen -DRRS worker-d3 -X stuff  "CUDA_VISIBLE_DEVICES=2,3 python3 -m fastchat.serve.model_worker --model-path $MODEL_PATH --port 41002 --worker-address http://localhost:41002 --controller-address  http://localhost:41001 --num-gpus 2 \r"
 # screen -DRRS worker-d1 -X stuff  "CUDA_VISIBLE_DEVICES=1 python3 -m fastchat.serve.model_worker --model-path $MODEL_PATH_1 --port 21003 --worker-address http://localhost:21003  --conv-template gemma --limit-worker-concurrency 1  \r"
 screen -DRRS api3 -X stuff  "python3 -m fastchat.serve.openai_api_server --host $API_HOST --port $API_PORT_NUMBER --controller-address  http://localhost:41001\r"

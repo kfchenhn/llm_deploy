@@ -1,1 +1,0 @@
-import{d as o,al as t,a1 as a,a2 as s,e as c,aa as n}from"./index-BSTqmw9T.js";const _={class:"page"},r=o({__name:"Bots",setup(p){return(d,m)=>{const e=t("router-view");return a(),s("div",_,[c(e)])}}}),l=n(r,[["__scopeId","data-v-0c4fe731"]]);export{l as default};

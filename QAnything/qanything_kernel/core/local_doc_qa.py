@@ -1,6 +1,6 @@
 import multiprocessing.process
 from qanything_kernel.configs.model_config import VECTOR_SEARCH_TOP_K, CHUNK_SIZE, VECTOR_SEARCH_SCORE_THRESHOLD, \
-    PROMPT_TEMPLATE,QUERY_PROMPT_TEMPLATE, STREAMING ,models,MODEL_NAMES
+    PROMPT_TEMPLATE, STREAMING ,models,MODEL_NAMES, COARSE_TOP_K,QUERY_PROMPT_TEMPLATE
 from typing import List
 import time
 from qanything_kernel.connector.llm.llm_for_openai_api import OpenAILLM
@@ -29,7 +29,7 @@ class LocalDocQA:
         self.embeddings: EmbeddingBackend = None
         self.top_k: int = VECTOR_SEARCH_TOP_K
         self.chunk_size: int = CHUNK_SIZE
-        self.score_threshold: int = VECTOR_SEARCH_SCORE_THRESHOLD
+        self.score_threshold: float = VECTOR_SEARCH_SCORE_THRESHOLD
         self.faiss_client: FaissClient = None
         self.mysql_client: KnowledgeBaseManager = None
         self.local_rerank_backend: RerankBackend = None
@@ -54,7 +54,8 @@ class LocalDocQA:
 
 
     def init_cfg(self, args=None):
-        self.rerank_top_k = int(args.model_size[0])
+        # self.rerank_top_k = int(args.model_size[0])
+        self.rerank_top_k=int(COARSE_TOP_K)
         self.use_cpu = args.use_cpu
         if args.use_openai_api:
             self.model = args.openai_api_model_name
@@ -253,14 +254,15 @@ class LocalDocQA:
                 deduplicated_docs.append(doc)
         return deduplicated_docs
 
-    async def local_doc_search(self, query, kb_ids, score_threshold=0.35):
+    async def local_doc_search(self, query, kb_ids, score_threshold=0.55):
         source_documents = await self.get_source_documents(query, kb_ids)
         deduplicated_docs = self.deduplicate_documents(source_documents)
-        retrieval_documents = sorted(deduplicated_docs, key=lambda x: x.metadata['score'], reverse=True)
+        # retrieval_documents = sorted(deduplicated_docs, key=lambda x: x.metadata['score'], reverse=True)
+        retrieval_documents=deduplicated_docs
         if len(retrieval_documents) > 1:
             debug_logger.info(f"use rerank, rerank docs num: {len(retrieval_documents)}")
             # rerank需要的query必须是改写后的, 不然会丢一些信息
-            retrieval_documents = self.rerank_documents(query, retrieval_documents)
+            retrieval_documents = self.rerank_documents(query, retrieval_documents, grain="coarse")
         # 删除掉分数低于阈值的文档
         if score_threshold:
             retrieval_documents = [item for item in retrieval_documents if float(item.metadata['score']) > score_threshold]
@@ -364,11 +366,11 @@ class LocalDocQA:
         prompt = prompt_template.replace("{question}", query).replace("{context}", context)
         return prompt
 
-    def rerank_documents(self, query, source_documents):
+    def rerank_documents(self, query, source_documents, grain="coarse"):
         if len(query) > 300:  # tokens数量超过300时不使用local rerank
             return source_documents
 
-        scores = self.local_rerank_backend.predict(query, [doc.page_content for doc in source_documents])
+        scores = self.local_rerank_backend.predict(query, [doc.page_content for doc in source_documents], grain=grain)
         debug_logger.info(f"rerank scores: {scores}")
         for idx, score in enumerate(scores):
                 source_documents[idx].metadata['score'] = score
@@ -376,12 +378,16 @@ class LocalDocQA:
         return source_documents
 
     async def retrieve(self, query, kb_ids, need_web_search=False):
-        retrieval_documents = await self.local_doc_search(query, kb_ids)
+        retrieval_documents = await self.local_doc_search(query, kb_ids, self.score_threshold)
+        debug_logger.info(f"retrieval_documents: {retrieval_documents}")
         if need_web_search:
             retrieval_documents.extend(self.web_page_search(query, top_k=3))
-        debug_logger.info(f"retrieval_documents: {retrieval_documents}")
-        retrieval_documents = self.rerank_documents(query, retrieval_documents)
-        debug_logger.info(f"reranked retrieval_documents: {retrieval_documents}")
+        if len(retrieval_documents)!=0:
+            retrieval_documents = self.rerank_documents(query, retrieval_documents, grain="fine")
+            ### filter the irrelevant dockerments
+            if self.score_threshold:
+                retrieval_documents = [item for item in retrieval_documents if float(item.metadata['score']) > self.score_threshold]
+            debug_logger.info(f"reranked retrieval_documents: {retrieval_documents}")
         return retrieval_documents
 
     async def get_knowledge_based_answer(self, custom_prompt, query, kb_ids, chat_history=None, 
@@ -395,18 +401,24 @@ class LocalDocQA:
         #retrieval_queries = [query]
         retrieval_documents = await self.retrieve(query, kb_ids, need_web_search=need_web_search)
 
-        if custom_prompt is None:
-            prompt_template = PROMPT_TEMPLATE
-        else:
-            prompt_template = custom_prompt + '\n' + PROMPT_TEMPLATE
+        prompt=""
+        source_documents=""
+        if len(retrieval_documents) != 0:
+            if custom_prompt is None:
+                prompt_template = PROMPT_TEMPLATE
+            else:
+                prompt_template = custom_prompt + '\n' + PROMPT_TEMPLATE
 
-        source_documents = self.reprocess_source_documents(query=query,
-                                                           source_docs=retrieval_documents,
-                                                           history=chat_history,
-                                                           prompt_template=prompt_template)
-        prompt = self.generate_prompt(query=query,
-                                      source_docs=source_documents,
-                                      prompt_template=prompt_template)
+            source_documents = self.reprocess_source_documents(query=query,
+                                                            source_docs=retrieval_documents,
+                                                            history=chat_history,
+                                                            prompt_template=prompt_template)
+            prompt = self.generate_prompt(query=query,
+                                        source_docs=source_documents,
+                                        prompt_template=prompt_template)
+        else:
+            prompt=query
+
         t1 = time.time()
         debug_logger.info("test3_history:%s",chat_history)
         async for answer_result in self.llm.generatorAnswer(prompt=prompt,

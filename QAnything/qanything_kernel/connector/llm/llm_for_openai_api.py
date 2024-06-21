@@ -10,7 +10,7 @@ import requests
 from qanything_kernel.utils.custom_log import debug_logger
 sys.path.append("../../../")
 from qanything_kernel.connector.llm.base import (BaseAnswer, AnswerResult)
-from qanything_kernel.configs.model_config import CHATGLM_URL,CHATGPT_URL,QWEN_URL, WHUCSMed_URL, SYSTEM_MESSAGE, HUATUOGPT2_URL
+from qanything_kernel.configs.model_config import CHATGLM_URL,CHATGPT_URL,QWEN_URL, WHUCSMed_URL, SYSTEM_MESSAGE, HUATUOGPT2_URL, LLM_HISTORY_LEN
 
 load_dotenv()
 
@@ -30,11 +30,11 @@ class OpenAILLM(BaseAnswer, ABC):
     max_token: int = 512
     offcut_token: int = 50
     truncate_len: int = 50
-    temperature: float = 0.7
+    temperature: float = 0
     top_p: float = 1.0 # top_p must be (0,1]
     stop_words: str = None
     history: List[List[str]] = []
-    history_len: int = 3
+    history_len: int = LLM_HISTORY_LEN
     api_key:str = None
 
     def __init__(self, args):
@@ -68,30 +68,30 @@ class OpenAILLM(BaseAnswer, ABC):
     def set_history_len(self, history_len: int = 10) -> None:
         self.history_len = history_len
 
-    def switch_llm(self,model_name):
-        if model_name == self.model :
-            print(f"当前模型为{model_name},无需切换")
-        elif model_name =="chatglm3-6b":
-            self.client = self.chatglm3_6b
-            print(f"切换模型{self.model}至{model_name}")
-            debug_logger.info(f"切换模型{self.model}至{model_name}")
-            self.model = "chatglm3-6b"
-        elif model_name =="qwen":
-            self.client = self.qwen
-            print(f"切换模型{self.model}至{model_name}")
-            debug_logger.info(f"切换模型{self.model}至{model_name}")
-            self.model = "qwen"
-        elif model_name =="whucs-med-7b":
-            self.client = self.whucs_med_7b
-            print(f"切换模型{self.model}至{model_name}")
-            debug_logger.info(f"切换模型{self.model}至{model_name}")
-            self.model = "whucs-med-7b"
+    # def switch_llm(self,model_name):
+    #     if model_name == self.model :
+    #         print(f"当前模型为{model_name},无需切换")
+    #     elif model_name =="chatglm3-6b":
+    #         self.client = self.chatglm3_6b
+    #         print(f"切换模型{self.model}至{model_name}")
+    #         debug_logger.info(f"切换模型{self.model}至{model_name}")
+    #         self.model = "chatglm3-6b"
+    #     elif model_name =="qwen":
+    #         self.client = self.qwen
+    #         print(f"切换模型{self.model}至{model_name}")
+    #         debug_logger.info(f"切换模型{self.model}至{model_name}")
+    #         self.model = "qwen"
+    #     elif model_name =="whucs-med-7b":
+    #         self.client = self.whucs_med_7b
+    #         print(f"切换模型{self.model}至{model_name}")
+    #         debug_logger.info(f"切换模型{self.model}至{model_name}")
+    #         self.model = "whucs-med-7b"
 
-        elif model_name.startswith("gpt"):
-            self.client = self.gpt
-            print(f"切换模型{self.model}至{model_name}")
-            debug_logger.info(f"切换模型{self.model}至{model_name}")
-            self.model = model_name
+    #     elif model_name.startswith("gpt"):
+    #         self.client = self.gpt
+    #         print(f"切换模型{self.model}至{model_name}")
+    #         debug_logger.info(f"切换模型{self.model}至{model_name}")
+    #         self.model = model_name
     # 定义函数 num_tokens_from_messages，该函数返回由一组消息所使用的token数
     def num_tokens_from_messages(self, messages, model=None):
         """Return the number of tokens used by a list of messages. From https://github.com/DjangoPeng/openai-quickstart/blob/main/openai_api/count_tokens_with_tiktoken.ipynb"""
@@ -199,7 +199,14 @@ class OpenAILLM(BaseAnswer, ABC):
             CLIENT = self.client
         # if model_name !=None:
         #     MODEL = model_name
-        for pair in history:
+        
+        current_history=[]
+        if len(history) <= self.history_len:
+            current_history=history
+        else:
+            current_history=history[-self.history_len:]
+
+        for pair in current_history:
             #luzhuoran 移植本地模型对于history的策略
             if(len(pair)==0):
                 break
@@ -207,7 +214,8 @@ class OpenAILLM(BaseAnswer, ABC):
             messages.append({"role": "user", "content": question})
             messages.append({"role": "assistant", "content": answer})
         messages.append({"role": "user", "content": prompt})
-        # messages.append({"role": "system", "content": SYSTEM_MESSAGE})
+        # chenkunfeng 加入 身份提示
+        messages.append({"role": "system", "content": SYSTEM_MESSAGE})
         debug_logger.info(messages)
 
         try:
@@ -275,7 +283,7 @@ class OpenAILLM(BaseAnswer, ABC):
         response = self._call(prompt, history, streaming, model_name)
         complete_answer = ""
         async for response_text in response:
-            
+
             if response_text:
                 chunk_str = response_text[6:]
                 if not chunk_str.startswith("[DONE]"):

@@ -1,19 +1,0 @@
-2024-06-14 12:33:50 | INFO | model_worker | args: Namespace(host='localhost', port=21002, worker_address='http://localhost:41002', controller_address='http://localhost:41001', model_path='/home/c205/workspace/models/THUDM/chatglm3-6b/', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template='qwen-7b-qanything', embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
-2024-06-14 12:33:50 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker facc8302 ...
-2024-06-14 12:33:50 | ERROR | stderr | Loading checkpoint shards:   0%|                          | 0/7 [00:00<?, ?it/s]
-2024-06-14 12:33:50 | ERROR | stderr | Loading checkpoint shards:  14%|██▌               | 1/7 [00:00<00:02,  2.13it/s]
-2024-06-14 12:33:51 | ERROR | stderr | Loading checkpoint shards:  29%|█████▏            | 2/7 [00:00<00:02,  2.11it/s]
-2024-06-14 12:33:51 | ERROR | stderr | Loading checkpoint shards:  43%|███████▋          | 3/7 [00:01<00:01,  2.00it/s]
-2024-06-14 12:33:52 | ERROR | stderr | Loading checkpoint shards:  57%|██████████▎       | 4/7 [00:01<00:01,  2.05it/s]
-2024-06-14 12:33:52 | ERROR | stderr | Loading checkpoint shards:  71%|████████████▊     | 5/7 [00:02<00:01,  1.99it/s]
-2024-06-14 12:33:53 | ERROR | stderr | Loading checkpoint shards:  86%|███████████████▍  | 6/7 [00:02<00:00,  1.96it/s]
-2024-06-14 12:33:53 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████| 7/7 [00:03<00:00,  2.25it/s]
-2024-06-14 12:33:53 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████| 7/7 [00:03<00:00,  2.12it/s]
-2024-06-14 12:33:53 | ERROR | stderr | 
-2024-06-14 12:33:55 | INFO | model_worker | Register to controller
-2024-06-14 12:33:55 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m73053[0m]
-2024-06-14 12:33:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
-2024-06-14 12:33:55 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
-2024-06-14 12:33:55 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('127.0.0.1', 21002): address already in use
-2024-06-14 12:33:55 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
-2024-06-14 12:33:55 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.

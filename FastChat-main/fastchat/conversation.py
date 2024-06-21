@@ -24,6 +24,7 @@ class SeparatorStyle(IntEnum):
     ADD_NEW_LINE_SINGLE = auto()
     LLAMA2 = auto()
     LLAMA3 = auto()
+    LLAMA3TXT2SQL = auto()
     CHATGLM = auto()
     CHATML = auto()
     CHATMLQANY = auto()
@@ -171,6 +172,20 @@ class Conversation:
                 else:
                     ret += f"<|start_header_id|>{role}<|end_header_id|>\n\n"
             return ret
+        elif self.sep_style == SeparatorStyle.LLAMA3TXT2SQL:
+            ret = "<|begin_of_text|>"
+            if self.system_message:
+                ret += system_prompt
+            else:
+                ret += ""
+            for i, (role, message) in enumerate(self.messages):
+                if message:
+                    ret += f"<|start_header_id|>{role}<|end_header_id|>\n\n"
+                    ret += f"###Input:\n{message.strip()}\n\n###Response:\n<|eot_id|>"
+                else:
+                    ret += f"<|start_header_id|>{role}<|end_header_id|>\n\n"
+            return ret
+        
         elif self.sep_style == SeparatorStyle.CHATGLM:
             # source: https://huggingface.co/THUDM/chatglm-6b/blob/1d240ba371910e9282298d4592532d7f0f3e9f3e/modeling_chatglm.py#L1302-L1308
             # source2: https://huggingface.co/THUDM/chatglm2-6b/blob/e186c891cf64310ac66ef10a87e6635fa6c2a579/modeling_chatglm.py#L926
@@ -1537,12 +1552,28 @@ register_conv_template(
 # llama3 template
 # reference: https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct/blob/main/tokenizer_config.json
 # reference: https://github.com/meta-llama/llama3/blob/0cee08ec68f4cfc0c89fe4a9366d82679aaa2a66/llama/tokenizer.py#L222
+txt2sql_instruction = """ I want you to act as a SQL terminal, you need only to return the sql command to me. Below is an instruction that describes a task, write a response that appropriately completes the request.\n\n##Instruction:\ndatabase schema :\ntable sm_fxyh_qycs_info , columns = ['sm_fxyh_qycs_info.qycsbh ( text | comment : 企业场所编号 | values : 1751625399880572929 , 1751625768459231233 , 1751625933437984770 )', 'sm_fxyh_qycs_info.qycsmc ( text | comment : 企业场所名称 | values : 黄冈鲁班药业股份有限公司 , 中国石化销售股份有限公司湖北咸宁通山大畈加油站 , 金澳科技(汉川)石化有限公司马口新庄加油站 )', 'sm_fxyh_qycs_info.tyshxydm ( text | comment : 统一社会信用代码 | values : 914205067932574708 , 91420802MA49PQ8Q3Y , 91420800MA48B6JT6L )', 'sm_fxyh_qycs_info.xzqhdm ( text | comment : 行政区划编号 | values : 420324 , 421083 , 420800 )', 'sm_fxyh_qycs_info.xzqh ( text | comment : 行政区划 | values : 孝感市大悟县 , 襄阳市枣阳市 , 随州市 )', 'sm_fxyh_qycs_info.xsfxdj ( text | comment : 现实风险等级 | values : blue , yellow , orange )', 'sm_fxyh_qycs_info.xsfxz ( text | comment : 现实风险值 | values : 3.315 , 1.617 , 8.347 )', 'sm_fxyh_qycs_info.gyfxdj ( text | comment : 固有风险等级 | values : blue , orange , yellow )', 'sm_fxyh_qycs_info.gyfxz ( text | comment : 固有风险值 | values : 40.920 , 11.799 , 19.280 )', 'sm_fxyh_qycs_info.jd ( text | comment : 场所地址-经度 | values : 115.751667 , 114.17607482 , 115.06358668 )', 'sm_fxyh_qycs_info.wd ( text | comment : 场所地址-纬度 | values : 32.066667 , 29.733889 , 30.88264978 )', 'sm_fxyh_qycs_info.bzhpf ( text | comment : 标准化评分 | values : 三级 , 一级 , 二级 )', 'sm_fxyh_qycs_info.aqscjghydldm ( text | comment : 全生产监管行业大类代码 | values : 20 , 10 , 30 )', 'sm_fxyh_qycs_info.aqscjghydlmc ( text | comment : 安全生产监管行业大类名称 | values : 工商贸 , 非煤矿山 , 危险化学品 )', 'sm_fxyh_qycs_info.aqscjghyxldm ( text | comment : 安全生产监管行业小类代码 | values : 23 , 36 , 37 )', 'sm_fxyh_qycs_info.aqscjghyxlmc ( text | comment : 安全生产监管行业小类名称 | values : 纺织行业 , 经营 , 机械行业 )', 'sm_fxyh_qycs_info.sfyrw ( text | comment : 是否应入网 | values : 是 )', 'sm_fxyh_qycs_info.sfrw ( text | comment : 是否已入网 | values : 是 , 否 )', 'sm_fxyh_qycs_info.load_time ( text | comment : 加载时间 | values : 2024-01-28 21:46:32 )', 'sm_fxyh_qycs_info.ancestors ( text | comment : 祖先 | values : 0,100,1735225404888895489 , 0,100,1735222542540656642 , 0,100 )', 'sm_fxyh_qycs_info.qyzt ( text | comment : 企业状态 | values : 存续（在营、开业、在册） )', 'sm_fxyh_qycs_info.jyfw ( text | comment : 经营范围 | values : 车用乙醇汽油、煤油、柴油零售(凭成品油零售经营批准证书经营)。 , 许可项目:危险化学品经营(依法须经批准的项目,经相关部门批准后方可开展经营活动,具体经营项目以相关部门批准文件或许可证件为准)一般项目:第三类非药品类易制毒化学品经营;化工产品销售(不含许可类化工产品);专用化学产品销售(不含危险化学品);日用化学产品销售(除许可业务外,可自主依法经营法律法规非禁止或限制的项目) , 乙醇汽油、煤油、汽油零售;润滑油零售;日用百货销售;柴油零售;汽车清洗服务;其他石油化工产品、便利店的经营;五金、电子产品、消防器材、办公用品、劳保用品、计生用品、药品的销售;设计、制作、代理、发布广告;委托代理收取水电费、票务代理服务;交通违章罚款及ETC代缴费、彩票、旅游代理服务;电信增值服务;汽车用品生产、销售;保险代理;设备、场地及自有房屋租赁。(涉及许可经营项目,应取得相关部门许可后方可经营) )', 'sm_fxyh_qycs_info.fddbr ( text | comment : 法定代表人 | values : 刘哲 , 邓兴华 , 晏庆明 )', 'sm_fxyh_qycs_info.fddbrlxfs ( text | comment : 法定代表人联系方式 | values : 15166221236 , 13807209011 , 18297461855 )', 'sm_fxyh_qycs_info.qyrs ( text | comment : 企业人数 | values : 168 , 1234 , 380 )', 'sm_fxyh_qycs_info.active_fxz ( text | comment : 实际现实风险值 | values : 3.315 , 1.617 , 8.347 )', 'sm_fxyh_qycs_info.active_fxdj ( text | comment : 实际现实风险等级 | values : blue , yellow , orange )', 'sm_fxyh_qycs_info.fzjgmc ( text | comment : 发证机构名称 | values : 黄冈市黄州区应急管理局 , 五峰土家族自治县应急管理局 , 咸丰县应急管理局 )', 'sm_fxyh_qycs_info.fzjgxzqhjb ( text | comment : 发证机构行政区划级别(省、市) | values : 区县 , 省 , 市 )'] \n \ntable sm_fxyh_pitfall_info, columns = ['sm_fxyh_pitfall_info.yhbh ( text | comment : 隐患编号 | values : 1019101148142688, 0509153026473330 )','sm_fxyh_pitfall_info.yhmc ( text | comment : 隐患名称 | values :  压铸车间熔融金属吊运跨存在生产办公场所, 护栏脱焊)','sm_fxyh_pitfall_info.yhdj ( text | comment : 隐患等级 | values : 一般安全生产事故隐患, 重大安全生产事故隐患)','sm_fxyh_pitfall_info.yhzt ( text | comment : 隐患状态 | values : 整改中, 已验收 )','sm_fxyh_pitfall_info.pcfxyhsj ( text | comment : 排查发现隐患时间 | values :  2023-07-21, 2023-12-19 )','sm_fxyh_pitfall_info.yhzgwcsj ( text | comment : 隐患整改完成时间 | values : 2024-01-27, 2023-09-20  )','sm_fxyh_pitfall_info.sfwpxj ( text | comment : 是否未批先建 | values :  )','sm_fxyh_pitfall_info.qycsbh ( text | comment : 企业场所编号 | values : 4211020085, 421110033 )','sm_fxyh_pitfall_info.xzqhdm ( text | comment : 行政区划编号 | values : 420324 , 421083 , 420800 )','sm_fxyh_pitfall_info.xzqh ( text | comment : 隐患编号 | values : 黄冈市黄州区, 襄阳市襄城区 )','sm_fxyh_pitfall_info.jd ( text | comment : 经度 | values : 115.751667 , 114.17607482 , 115.06358668 )','sm_fxyh_pitfall_info.wd ( text | comment : 纬度 | values : 32.066667 , 29.733889 , 30.88264978 )','sm_fxyh_pitfall_info.aqscjghydldm ( text | comment : 安全生产监管行业大类代码 | values : 20 , 10 , 30 )','sm_fxyh_pitfall_info.aqscjghydlmc ( text | comment : 安全生产监管行业大类名称 | values : 工商贸 , 非煤矿山 , 危险化学品 )','sm_fxyh_pitfall_info.load_time ( text | comment : 加载时间 | values :  2024-01-28 21:46:32 )','sm_fxyh_pitfall_info.yhdjbm ( text | comment : 隐患等级编码 | values : 1,2,3 )','sm_fxyh_pitfall_info.dqztbm ( text | comment : 整改期限 | values :  2024-01-27, 2023-09-20 )','sm_fxyh_pitfall_info.lymc ( text | comment :来源名称 | values :监管执法,自查自报 )','sm_fxyh_pitfall_info.lybm ( text | comment :来源编码(1-自查自报2-行政执法3-审批核查4-在线监测5-群众举报) | values : 1,2)','sm_fxyh_pitfall_info.urgent_status ( int | comment : 催办状态1=未催办 2=已催办 | values :  1,2)','sm_fxyh_pitfall_info.qycsmc ( text | comment : 企业场所名称 | values : 黄冈鲁班药业股份有限公司  )',] \n When generating SQL statements, Sometimes it is necessary to know the relationship between place names and their xzqhdm(行政区划代码).The following binary groups represent the relationship between place names and xzqhdm codes:(湖北省, 420000)，(武汉市, 420100)，(黄石市, 420200)，(十堰市, 420300)，(宜昌市, 420500)，(襄阳市, 420600)，(鄂州市, 420700)，(荆门市, 420800)，(孝感市, 420900)，(荆州市, 421000)，(黄冈市, 421100)，(咸宁市, 421200)，(随州市, 421300)，(恩施土家族苗族自治州, 422800)，(仙桃市, 429004)，(潜江市, 429005)，(天门市, 429006)，(神农架林区, 429021)，(武汉市江岸区, 420102)，(武汉市江汉区, 420103)，(武汉市硚口区, 420104)，(武汉市汉阳区, 420105)，(武汉市武昌区, 420106)，(武汉市青山区, 420107)，(武汉市洪山区, 420111)，(武汉市东西湖区, 420112)，(武汉市汉南区, 420113)，(武汉市蔡甸区, 420114)，(武汉市江夏区, 420115)，(武汉市黄陂区, 420116)，(武汉市新洲区, 420117)，(黄石市黄石港区, 420202)，(黄石市西塞山区, 420203)，(黄石市下陆区, 420204)，(黄石市铁山区, 420205)，(黄石市阳新县, 420222)，(十堰市茅箭区, 420302)，(十堰市张湾区, 420303)，(十堰市郧阳区, 420304)，(十堰市郧西县, 420322)，(十堰市竹山县, 420323)，(十堰市竹溪县, 420324)，(十堰市房县, 420325)，(十堰市丹江口市, 420381)，(宜昌市西陵区, 420502)，(宜昌市伍家岗区, 420503)，(宜昌市点军区, 420504)，(宜昌市猇亭区, 420505)，(宜昌市夷陵区, 420506)，(宜昌市远安县, 420525)，(宜昌市兴山县, 420526)，(宜昌市秭归县, 420527)，(宜昌市长阳土家族自治县, 420528)，(宜昌市五峰土家族自治县, 420529)，(宜昌市宜都市, 420581)，(宜昌市当阳市, 420582)，(宜昌市枝江市, 420583)，(襄阳市襄城区, 420602)，(襄阳市樊城区, 420606)，(襄阳市襄州区, 420607)，(襄阳市南漳县, 420624)，(襄阳市谷城县, 420625)，(襄阳市保康县, 420626)，(襄阳市老河口市, 420682)，(襄阳市枣阳市, 420683)，(襄阳市宜城市, 420684)，(鄂州市梁子湖区, 420702)，(鄂州市华容区, 420703)，(鄂州市鄂城区, 420704)，(荆门市东宝区, 420802)，(荆门市掇刀区, 420804)，(荆门市京山县, 420821)，(荆门市沙洋县, 420822)，(荆门市钟祥市, 420881)，(孝感市孝南区, 420902)，(孝感市孝昌县, 420921)，(孝感市大悟县, 420922)，(孝感市云梦县, 420923)，(孝感市应城市, 420981)，(孝感市安陆市, 420982)，(孝感市汉川市, 420984)，(荆州市沙市区, 421002)，(荆州市荆州区, 421003)，(荆州市公安县, 421022)，(荆州市监利县, 421023)，(荆州市江陵县, 421024)，(荆州市石首市, 421081)，(荆州市洪湖市, 421083)，(荆州市松滋市, 421087)，(黄冈市黄州区, 421102)，(黄冈市团风县, 421121)，(黄冈市红安县, 421122)，(黄冈市罗田县, 421123)，(黄冈市英山县, 421124)，(黄冈市浠水县, 421125)，(黄冈市蕲春县, 421126)，(黄冈市黄梅县, 421127)，(黄冈市麻城市, 421181)，(黄冈市武穴市, 421182)，(咸宁市咸安区, 421202)，(咸宁市赤壁市, 421281)，(咸宁市嘉鱼县, 421221)，(咸宁市通城县, 421222)，(咸宁市崇阳县, 421223)，(咸宁市通山县, 421224)，(随州市, 421300)，(随州市曾都区, 421303)，(随州市随县, 421321)，(随州市广水市, 421381)，(恩施土家族苗族自治州, 422800)，(恩施市, 422801)，(恩施土家族苗族自治州利川市, 422802)，(恩施土家族苗族自治州建始县, 422822)，(恩施土家族苗族自治州巴东县, 422823)，(恩施土家族苗族自治州宣恩县, 422825)，(恩施土家族苗族自治州咸丰县, 422826)，(恩施土家族苗族自治州来凤县, 422827)，(恩施土家族苗族自治州鹤峰县, 422828). \n 仙桃市, 潜江市, 天门市, 神农架林区 should be look as city though their xzqhdm is not end with '00'. """
+
+
 register_conv_template(
     Conversation(
         name="llama-3",
         system_template="<|start_header_id|>system<|end_header_id|>\n\n{system_message}<|eot_id|>",
         roles=("user", "assistant"),
         sep_style=SeparatorStyle.LLAMA3,
+        sep="",
+        stop_str="<|eot_id|>",
+        stop_token_ids=[128001, 128009],
+    )
+)
+
+register_conv_template(
+    Conversation(
+        name="txt2sql",
+        system_template="<|start_header_id|>system<|end_header_id|>\n\n{system_message}<|eot_id|>",
+        # system_message=txt2sql_instruction,
+        roles=("user", "assistant"),
+        sep_style=SeparatorStyle.LLAMA3TXT2SQL,
         sep="",
         stop_str="<|eot_id|>",
         stop_token_ids=[128001, 128009],
@@ -1691,6 +1722,23 @@ register_conv_template(
         stop_str="<|endoftext|>",
     )
 )
+
+# register_conv_template(
+#     Conversation(
+#         name="qwen-7b-qanything-rag",
+#         system_template="<|endoftext|><|endoftext|>system\n{system_message}",
+#         system_message="你是一个乐于助人的助手。请你提供专业、有逻辑、内容真实、有价值的详细回复。",
+#         roles=("<|endoftext|>user", "<|endoftext|>assistant"),
+#         sep_style=SeparatorStyle.CHATMLQANY,
+#         sep="<|endoftext|>",
+#         stop_token_ids=[
+#             151643,
+#         ],  # "<|endoftext|>", "<|im_start|>", "<|im_end|>"
+#         stop_str="<|endoftext|>",
+#     )
+# )
+
+
 
 # source: https://huggingface.co/01-ai/Yi-34B-Chat/blob/main/tokenizer_config.json#L60
 register_conv_template(

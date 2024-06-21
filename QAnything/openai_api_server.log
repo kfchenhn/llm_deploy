@@ -1,0 +1,553 @@
+2024-06-13 21:14:53 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=21003, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:14:53 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3231004[0m]
+2024-06-13 21:14:53 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:14:53 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:14:53 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:21003[0m (Press CTRL+C to quit)
+2024-06-13 21:15:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33474 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:16:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:34568 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:16:45 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37188 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:16:59 | INFO | stdout | [32mINFO[0m:     127.0.0.1:45372 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 21:18:04 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:18:04 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:18:04 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:18:04 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3231004[0m]
+2024-06-13 21:18:04 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:18:04 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:18:04 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:18:04 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:18:04 | ERROR | stderr |     server.run()
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:18:04 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:18:04 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:18:04 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:18:04 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:18:04 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:18:04 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:18:04 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:18:04 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:23:44 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=21003, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:23:44 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3237486[0m]
+2024-06-13 21:23:44 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:23:44 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:23:44 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:21003[0m (Press CTRL+C to quit)
+2024-06-13 21:24:27 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36396 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 21:27:31 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:27:31 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:27:31 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:27:31 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3237486[0m]
+2024-06-13 21:27:31 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:27:31 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:27:31 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:27:31 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:27:31 | ERROR | stderr |     server.run()
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:27:31 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:27:31 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:27:31 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:27:31 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:27:31 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:27:31 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:27:31 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:27:31 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:28:01 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:28:01 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3240306[0m]
+2024-06-13 21:28:01 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:28:01 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:28:01 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8001): address already in use
+2024-06-13 21:28:01 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:28:01 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:30:42 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:30:42 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3243628[0m]
+2024-06-13 21:30:42 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:30:42 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:30:42 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8001): address already in use
+2024-06-13 21:30:42 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:30:42 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:33:01 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8000, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:33:01 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3246180[0m]
+2024-06-13 21:33:01 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:33:01 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:33:01 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+2024-06-13 21:33:27 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:33:27 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:33:27 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:33:27 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3246180[0m]
+2024-06-13 21:33:27 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:33:27 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:33:27 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:33:27 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:33:27 | ERROR | stderr |     server.run()
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:33:27 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:33:27 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:33:27 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:33:27 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:33:27 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:33:27 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:33:27 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:33:27 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:33:57 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8000, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:33:57 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3247679[0m]
+2024-06-13 21:33:57 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:33:57 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:33:57 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+2024-06-13 21:34:44 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:34:44 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:34:44 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:34:44 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3247679[0m]
+2024-06-13 21:34:44 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:34:44 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:34:44 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:34:44 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:34:44 | ERROR | stderr |     server.run()
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:34:44 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:34:44 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:34:44 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:34:44 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:34:44 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:34:44 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:34:44 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:34:44 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:35:09 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=21003, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:35:09 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3248954[0m]
+2024-06-13 21:35:09 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:35:09 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:35:09 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:21003[0m (Press CTRL+C to quit)
+2024-06-13 21:35:22 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:35:22 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:35:22 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:35:22 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3248954[0m]
+2024-06-13 21:35:22 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:35:22 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:35:22 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:35:22 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:35:22 | ERROR | stderr |     server.run()
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:35:22 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:35:22 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:35:22 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:35:22 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:35:22 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:35:22 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:35:22 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:35:22 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:36:10 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=21003, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:36:10 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3250796[0m]
+2024-06-13 21:36:10 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:36:10 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:36:10 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:21003[0m (Press CTRL+C to quit)
+2024-06-13 21:38:13 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33760 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:39:35 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:39:35 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:39:35 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:39:35 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3250796[0m]
+2024-06-13 21:39:35 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:39:35 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:39:35 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:39:35 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:39:35 | ERROR | stderr |     server.run()
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:39:35 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:39:35 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:39:35 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:39:35 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:39:35 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:39:35 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:39:35 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:39:35 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:42:35 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8000, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:42:35 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3257942[0m]
+2024-06-13 21:42:35 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:42:35 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:42:35 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+2024-06-13 21:42:45 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:42:45 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:42:45 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:42:45 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3257942[0m]
+2024-06-13 21:42:45 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:42:45 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:42:45 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:42:45 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:42:45 | ERROR | stderr |     server.run()
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:42:45 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:42:45 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:42:45 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:42:45 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:42:45 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:42:45 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:42:45 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:42:45 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:44:42 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8000, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:44:42 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3261782[0m]
+2024-06-13 21:44:42 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:44:42 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:44:42 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+2024-06-13 21:45:03 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49600 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:46:31 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49424 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:47:35 | INFO | stdout | [32mINFO[0m:     127.0.0.1:43566 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 21:48:11 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2024-06-13 21:48:11 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:48:11 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:48:11 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m3261782[0m]
+2024-06-13 21:48:11 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+2024-06-13 21:48:11 | ERROR | stderr |     return _run_code(code, main_globals, None,
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/runpy.py", line 86, in _run_code
+2024-06-13 21:48:11 | ERROR | stderr |     exec(code, run_globals)
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 940, in <module>
+2024-06-13 21:48:11 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/main.py", line 575, in run
+2024-06-13 21:48:11 | ERROR | stderr |     server.run()
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+2024-06-13 21:48:11 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/runners.py", line 44, in run
+2024-06-13 21:48:11 | ERROR | stderr |     return loop.run_until_complete(main)
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/loop.pyx", line 1511, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/loop.pyx", line 1504, in uvloop.loop.Loop.run_until_complete
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/loop.pyx", line 1377, in uvloop.loop.Loop.run_forever
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/loop.pyx", line 555, in uvloop.loop.Loop._run
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/loop.pyx", line 474, in uvloop.loop.Loop._on_idle
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+2024-06-13 21:48:11 | ERROR | stderr |   File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 68, in serve
+2024-06-13 21:48:11 | ERROR | stderr |     with self.capture_signals():
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/contextlib.py", line 142, in __exit__
+2024-06-13 21:48:11 | ERROR | stderr |     next(self.gen)
+2024-06-13 21:48:11 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/server.py", line 328, in capture_signals
+2024-06-13 21:48:11 | ERROR | stderr |     signal.raise_signal(captured_signal)
+2024-06-13 21:48:11 | ERROR | stderr | KeyboardInterrupt
+2024-06-13 21:54:22 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://0.0.0.0:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3269341[0m]
+2024-06-13 21:54:22 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8000, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8001[0m (Press CTRL+C to quit)
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3269338[0m]
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:54:22 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+2024-06-13 21:55:19 | INFO | stdout | [32mINFO[0m:     127.0.0.1:57590 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 21:55:41 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44522 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:57:36 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8001, controller_address='http://0.0.0.0:31001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:57:36 | INFO | openai_api_server | args: Namespace(host='0.0.0.0', port=8000, controller_address='http://0.0.0.0:21001', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_keys=None, ssl=False)
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3273250[0m]
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:57:36 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8001): address already in use
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m3273247[0m]
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2024-06-13 21:57:36 | ERROR | stderr | [31mERROR[0m:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2024-06-13 21:57:36 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2024-06-13 21:58:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:46432 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:58:17 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52524 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:58:50 | INFO | stdout | [32mINFO[0m:     127.0.0.1:48178 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:59:07 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36960 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 21:59:42 | INFO | stdout | [32mINFO[0m:     127.0.0.1:36510 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 21:59:56 | INFO | stdout | [32mINFO[0m:     127.0.0.1:37118 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 22:00:02 | INFO | stdout | [32mINFO[0m:     127.0.0.1:40776 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 22:00:33 | INFO | stdout | [32mINFO[0m:     127.0.0.1:52496 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [31m400 Bad Request[0m
+2024-06-13 22:01:05 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58038 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 22:02:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44348 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 22:02:25 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-06-13 22:02:25 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 22:02:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 265, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |     await wrap(partial(self.listen_for_disconnect, receive))
+2024-06-13 22:02:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 261, in wrap
+2024-06-13 22:02:25 | ERROR | stderr |     await func()
+2024-06-13 22:02:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 238, in listen_for_disconnect
+2024-06-13 22:02:25 | ERROR | stderr |     message = await receive()
+2024-06-13 22:02:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 568, in receive
+2024-06-13 22:02:25 | ERROR | stderr |     await self.message_event.wait()
+2024-06-13 22:02:25 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/locks.py", line 214, in wait
+2024-06-13 22:02:25 | ERROR | stderr |     await fut
+2024-06-13 22:02:25 | ERROR | stderr | asyncio.exceptions.CancelledError: Cancelled by cancel scope 7b2262d9ff40
+2024-06-13 22:02:25 | ERROR | stderr | 
+2024-06-13 22:02:25 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-13 22:02:25 | ERROR | stderr | 
+2024-06-13 22:02:25 | ERROR | stderr |   + Exception Group Traceback (most recent call last):
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+2024-06-13 22:02:25 | ERROR | stderr |   |     result = await app(  # type: ignore[func-returns-value]
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     return await self.app(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     await super().__call__(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/applications.py", line 123, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     await self.middleware_stack(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     await self.app(scope, receive, _send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     await self.app(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+2024-06-13 22:02:25 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-13 22:02:25 | ERROR | stderr |   |     await app(scope, receive, sender)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 756, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     await self.middleware_stack(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 776, in app
+2024-06-13 22:02:25 | ERROR | stderr |   |     await route.handle(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 297, in handle
+2024-06-13 22:02:25 | ERROR | stderr |   |     await self.app(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 77, in app
+2024-06-13 22:02:25 | ERROR | stderr |   |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+2024-06-13 22:02:25 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-13 22:02:25 | ERROR | stderr |   |     await app(scope, receive, sender)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 75, in app
+2024-06-13 22:02:25 | ERROR | stderr |   |     await response(scope, receive, send)
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 258, in __call__
+2024-06-13 22:02:25 | ERROR | stderr |   |     async with anyio.create_task_group() as task_group:
+2024-06-13 22:02:25 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+2024-06-13 22:02:25 | ERROR | stderr |   |     raise BaseExceptionGroup(
+2024-06-13 22:02:25 | ERROR | stderr |   | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+2024-06-13 22:02:25 | ERROR | stderr |   +-+---------------- 1 ----------------
+2024-06-13 22:02:25 | ERROR | stderr |     | Traceback (most recent call last):
+2024-06-13 22:02:25 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 261, in wrap
+2024-06-13 22:02:25 | ERROR | stderr |     |     await func()
+2024-06-13 22:02:25 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 250, in stream_response
+2024-06-13 22:02:25 | ERROR | stderr |     |     async for chunk in self.body_iterator:
+2024-06-13 22:02:25 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 506, in chat_completion_stream_generator
+2024-06-13 22:02:25 | ERROR | stderr |     |     yield f"data: {chunk.json(exclude_unset=True, ensure_ascii=False)}\n\n"
+2024-06-13 22:02:25 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/pydantic/main.py", line 1102, in json
+2024-06-13 22:02:25 | ERROR | stderr |     |     raise TypeError('`dumps_kwargs` keyword arguments are no longer supported.')
+2024-06-13 22:02:25 | ERROR | stderr |     | TypeError: `dumps_kwargs` keyword arguments are no longer supported.
+2024-06-13 22:02:25 | ERROR | stderr |     +------------------------------------
+2024-06-13 22:02:32 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44522 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 22:02:32 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-06-13 22:02:32 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 22:02:32 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 265, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |     await wrap(partial(self.listen_for_disconnect, receive))
+2024-06-13 22:02:32 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 261, in wrap
+2024-06-13 22:02:32 | ERROR | stderr |     await func()
+2024-06-13 22:02:32 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 238, in listen_for_disconnect
+2024-06-13 22:02:32 | ERROR | stderr |     message = await receive()
+2024-06-13 22:02:32 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 568, in receive
+2024-06-13 22:02:32 | ERROR | stderr |     await self.message_event.wait()
+2024-06-13 22:02:32 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/locks.py", line 214, in wait
+2024-06-13 22:02:32 | ERROR | stderr |     await fut
+2024-06-13 22:02:32 | ERROR | stderr | asyncio.exceptions.CancelledError: Cancelled by cancel scope 7b2262df7640
+2024-06-13 22:02:32 | ERROR | stderr | 
+2024-06-13 22:02:32 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-13 22:02:32 | ERROR | stderr | 
+2024-06-13 22:02:32 | ERROR | stderr |   + Exception Group Traceback (most recent call last):
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+2024-06-13 22:02:32 | ERROR | stderr |   |     result = await app(  # type: ignore[func-returns-value]
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     return await self.app(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     await super().__call__(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/applications.py", line 123, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     await self.middleware_stack(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     await self.app(scope, receive, _send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     await self.app(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+2024-06-13 22:02:32 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-13 22:02:32 | ERROR | stderr |   |     await app(scope, receive, sender)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 756, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     await self.middleware_stack(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 776, in app
+2024-06-13 22:02:32 | ERROR | stderr |   |     await route.handle(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 297, in handle
+2024-06-13 22:02:32 | ERROR | stderr |   |     await self.app(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 77, in app
+2024-06-13 22:02:32 | ERROR | stderr |   |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+2024-06-13 22:02:32 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-13 22:02:32 | ERROR | stderr |   |     await app(scope, receive, sender)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 75, in app
+2024-06-13 22:02:32 | ERROR | stderr |   |     await response(scope, receive, send)
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 258, in __call__
+2024-06-13 22:02:32 | ERROR | stderr |   |     async with anyio.create_task_group() as task_group:
+2024-06-13 22:02:32 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+2024-06-13 22:02:32 | ERROR | stderr |   |     raise BaseExceptionGroup(
+2024-06-13 22:02:32 | ERROR | stderr |   | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+2024-06-13 22:02:32 | ERROR | stderr |   +-+---------------- 1 ----------------
+2024-06-13 22:02:32 | ERROR | stderr |     | Traceback (most recent call last):
+2024-06-13 22:02:32 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 261, in wrap
+2024-06-13 22:02:32 | ERROR | stderr |     |     await func()
+2024-06-13 22:02:32 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 250, in stream_response
+2024-06-13 22:02:32 | ERROR | stderr |     |     async for chunk in self.body_iterator:
+2024-06-13 22:02:32 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 506, in chat_completion_stream_generator
+2024-06-13 22:02:32 | ERROR | stderr |     |     yield f"data: {chunk.json(exclude_unset=True, ensure_ascii=False)}\n\n"
+2024-06-13 22:02:32 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/pydantic/main.py", line 1102, in json
+2024-06-13 22:02:32 | ERROR | stderr |     |     raise TypeError('`dumps_kwargs` keyword arguments are no longer supported.')
+2024-06-13 22:02:32 | ERROR | stderr |     | TypeError: `dumps_kwargs` keyword arguments are no longer supported.
+2024-06-13 22:02:32 | ERROR | stderr |     +------------------------------------
+2024-06-13 22:02:38 | INFO | stdout | [32mINFO[0m:     127.0.0.1:51918 - "[1mPOST /v1/chat/completions HTTP/1.1[0m" [32m200 OK[0m
+2024-06-13 22:02:38 | ERROR | stderr | [31mERROR[0m:    Exception in ASGI application
+2024-06-13 22:02:38 | ERROR | stderr | Traceback (most recent call last):
+2024-06-13 22:02:38 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 265, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |     await wrap(partial(self.listen_for_disconnect, receive))
+2024-06-13 22:02:38 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 261, in wrap
+2024-06-13 22:02:38 | ERROR | stderr |     await func()
+2024-06-13 22:02:38 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 238, in listen_for_disconnect
+2024-06-13 22:02:38 | ERROR | stderr |     message = await receive()
+2024-06-13 22:02:38 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 568, in receive
+2024-06-13 22:02:38 | ERROR | stderr |     await self.message_event.wait()
+2024-06-13 22:02:38 | ERROR | stderr |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/asyncio/locks.py", line 214, in wait
+2024-06-13 22:02:38 | ERROR | stderr |     await fut
+2024-06-13 22:02:38 | ERROR | stderr | asyncio.exceptions.CancelledError: Cancelled by cancel scope 7b2262df6c20
+2024-06-13 22:02:38 | ERROR | stderr | 
+2024-06-13 22:02:38 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2024-06-13 22:02:38 | ERROR | stderr | 
+2024-06-13 22:02:38 | ERROR | stderr |   + Exception Group Traceback (most recent call last):
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+2024-06-13 22:02:38 | ERROR | stderr |   |     result = await app(  # type: ignore[func-returns-value]
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     return await self.app(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     await super().__call__(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/applications.py", line 123, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     await self.middleware_stack(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     await self.app(scope, receive, _send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     await self.app(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+2024-06-13 22:02:38 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-13 22:02:38 | ERROR | stderr |   |     await app(scope, receive, sender)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 756, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     await self.middleware_stack(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 776, in app
+2024-06-13 22:02:38 | ERROR | stderr |   |     await route.handle(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 297, in handle
+2024-06-13 22:02:38 | ERROR | stderr |   |     await self.app(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 77, in app
+2024-06-13 22:02:38 | ERROR | stderr |   |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+2024-06-13 22:02:38 | ERROR | stderr |   |     raise exc
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2024-06-13 22:02:38 | ERROR | stderr |   |     await app(scope, receive, sender)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/routing.py", line 75, in app
+2024-06-13 22:02:38 | ERROR | stderr |   |     await response(scope, receive, send)
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 258, in __call__
+2024-06-13 22:02:38 | ERROR | stderr |   |     async with anyio.create_task_group() as task_group:
+2024-06-13 22:02:38 | ERROR | stderr |   |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 678, in __aexit__
+2024-06-13 22:02:38 | ERROR | stderr |   |     raise BaseExceptionGroup(
+2024-06-13 22:02:38 | ERROR | stderr |   | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+2024-06-13 22:02:38 | ERROR | stderr |   +-+---------------- 1 ----------------
+2024-06-13 22:02:38 | ERROR | stderr |     | Traceback (most recent call last):
+2024-06-13 22:02:38 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 261, in wrap
+2024-06-13 22:02:38 | ERROR | stderr |     |     await func()
+2024-06-13 22:02:38 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/starlette/responses.py", line 250, in stream_response
+2024-06-13 22:02:38 | ERROR | stderr |     |     async for chunk in self.body_iterator:
+2024-06-13 22:02:38 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/fastchat/serve/openai_api_server.py", line 506, in chat_completion_stream_generator
+2024-06-13 22:02:38 | ERROR | stderr |     |     yield f"data: {chunk.json(exclude_unset=True, ensure_ascii=False)}\n\n"
+2024-06-13 22:02:38 | ERROR | stderr |     |   File "/home/c205/anaconda3/envs/qanything-python/lib/python3.10/site-packages/pydantic/main.py", line 1102, in json
+2024-06-13 22:02:38 | ERROR | stderr |     |     raise TypeError('`dumps_kwargs` keyword arguments are no longer supported.')
+2024-06-13 22:02:38 | ERROR | stderr |     | TypeError: `dumps_kwargs` keyword arguments are no longer supported.
+2024-06-13 22:02:38 | ERROR | stderr |     +------------------------------------

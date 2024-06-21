@@ -2,7 +2,7 @@ from qanything_kernel.core.local_file import LocalFile
 from qanything_kernel.core.local_doc_qa import LocalDocQA
 from qanything_kernel.utils.general_utils import *
 from qanything_kernel.utils.custom_log import debug_logger, qa_logger
-from qanything_kernel.configs.model_config import BOT_DESC, BOT_IMAGE, BOT_PROMPT, BOT_WELCOME, WHU_MED_PROMPT_PREFIX, QWEN_PROMPT_PREFIX
+from qanything_kernel.configs.model_config import BOT_DESC, BOT_IMAGE, BOT_PROMPT, BOT_WELCOME, WHU_MED_PROMPT_PREFIX
 from sanic.response import ResponseStream
 from sanic.response import json as sanic_json
 from sanic.response import text as sanic_text
@@ -430,8 +430,8 @@ async def local_doc_chat(req: request):
     
     # chenkunfeng大模型模式
     if chat_mode == "llm" or (bot_id and local_doc_qa.mysql_client.check_kb_exist(user_id, kb_ids)) or len(kb_ids) == 0:
-        if model_name == "whucs-med-7b" or model_name == "whucs-med-13b":
-            custom_prompt = WHU_MED_PROMPT_PREFIX
+        # if model_name == "whucs-med-7b" or model_name == "whucs-med-13b":
+        #     custom_prompt = WHU_MED_PROMPT_PREFIX
         # if model_name == "llm-only-for-rag-7b":
         #     custom_prompt = WHU_MED_PROMPT_PREFIX
         time_record = {}

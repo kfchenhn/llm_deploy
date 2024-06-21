@@ -321,8 +321,6 @@ const stopChat = () => {
 
 //发送问答消息
 const send = () => {
-  console.log(modelName.value);
-
   if (!question.value.length) {
     return;
   }
@@ -332,9 +330,7 @@ const send = () => {
   const q = question.value;
   question.value = '';
   addQuestion(q);
-  // if (history.value.length >= 3) {
-  //   history.value = [];
-  // }
+
   showLoading.value = true;
   ctrl = new AbortController();
   let body = {
@@ -394,7 +390,7 @@ const send = () => {
       }
 
       if (res?.history.length) {
-        history.value = res?.history;
+        history.value.push(res?.history[res?.history.length - 1]);
       }
     },
     onclose(e: any) {

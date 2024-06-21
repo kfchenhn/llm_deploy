@@ -1,57 +1,0 @@
-2024-06-14 12:55:06 | INFO | model_worker | args: Namespace(host='localhost', port=41002, worker_address='http://localhost:41002', controller_address='http://localhost:41001', model_path='/home/c205/workspace/models/THUDM/chatglm3-6b/', revision='main', device='cuda', gpus=None, num_gpus=1, max_gpu_memory=None, dtype=None, load_8bit=False, cpu_offloading=False, gptq_ckpt=None, gptq_wbits=16, gptq_groupsize=-1, gptq_act_order=False, awq_ckpt=None, awq_wbits=16, awq_groupsize=-1, enable_exllama=False, exllama_max_seq_len=4096, exllama_gpu_split=None, exllama_cache_8bit=False, enable_xft=False, xft_max_seq_len=4096, xft_dtype=None, model_names=None, conv_template=None, embed_in_truncate=False, limit_worker_concurrency=5, stream_interval=2, no_register=False, seed=None, debug=False, ssl=False)
-2024-06-14 12:55:06 | INFO | model_worker | Loading the model ['chatglm3-6b'] on worker fb557427 ...
-2024-06-14 12:55:06 | ERROR | stderr | Loading checkpoint shards:   0%|                                                                                                                                                                                                                          | 0/7 [00:00<?, ?it/s]
-2024-06-14 12:55:06 | ERROR | stderr | Loading checkpoint shards:  14%|██████████████████████████████                                                                                                                                                                                    | 1/7 [00:00<00:01,  5.36it/s]
-2024-06-14 12:55:06 | ERROR | stderr | Loading checkpoint shards:  29%|████████████████████████████████████████████████████████████                                                                                                                                                      | 2/7 [00:00<00:00,  5.23it/s]
-2024-06-14 12:55:06 | ERROR | stderr | Loading checkpoint shards:  43%|██████████████████████████████████████████████████████████████████████████████████████████                                                                                                                        | 3/7 [00:00<00:00,  5.23it/s]
-2024-06-14 12:55:06 | ERROR | stderr | Loading checkpoint shards:  57%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                          | 4/7 [00:00<00:00,  5.33it/s]
-2024-06-14 12:55:07 | ERROR | stderr | Loading checkpoint shards:  71%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                            | 5/7 [00:00<00:00,  5.28it/s]
-2024-06-14 12:55:07 | ERROR | stderr | Loading checkpoint shards:  86%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                              | 6/7 [00:01<00:00,  5.29it/s]
-2024-06-14 12:55:07 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  5.87it/s]
-2024-06-14 12:55:07 | ERROR | stderr | Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:01<00:00,  5.52it/s]
-2024-06-14 12:55:07 | ERROR | stderr | 
-2024-06-14 12:55:08 | INFO | model_worker | Register to controller
-2024-06-14 12:55:08 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m78799[0m]
-2024-06-14 12:55:08 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
-2024-06-14 12:55:08 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
-2024-06-14 12:55:08 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://localhost:41002[0m (Press CTRL+C to quit)
-2024-06-14 12:55:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59986 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:55:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59988 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:55:25 | INFO | stdout | [32mINFO[0m:     127.0.0.1:59996 - "[1mPOST /worker_generate_stream HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:55:53 | INFO | model_worker | Send heart beat. Models: ['chatglm3-6b']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: fb557427. 
-2024-06-14 12:56:38 | INFO | model_worker | Send heart beat. Models: ['chatglm3-6b']. Semaphore: Semaphore(value=5, locked=False). call_ct: 1. worker_id: fb557427. 
-2024-06-14 12:56:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49474 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:56:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49488 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:56:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:49492 - "[1mPOST /worker_generate_stream HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:56:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44504 - "[1mPOST /model_details HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:56:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44512 - "[1mPOST /count_token HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:56:53 | INFO | stdout | [32mINFO[0m:     127.0.0.1:44514 - "[1mPOST /worker_generate_stream HTTP/1.1[0m" [32m200 OK[0m
-2024-06-14 12:57:18 | ERROR | stderr | [32mINFO[0m:     Shutting down
-2024-06-14 12:57:18 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
-2024-06-14 12:57:18 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
-2024-06-14 12:57:18 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m78799[0m]
-2024-06-14 12:57:18 | ERROR | stderr | Traceback (most recent call last):
-2024-06-14 12:57:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 118, in run
-2024-06-14 12:57:18 | ERROR | stderr |     return self._loop.run_until_complete(task)
-2024-06-14 12:57:18 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-06-14 12:57:18 | ERROR | stderr |   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
-2024-06-14 12:57:18 | ERROR | stderr | asyncio.exceptions.CancelledError
-2024-06-14 12:57:18 | ERROR | stderr | 
-2024-06-14 12:57:18 | ERROR | stderr | During handling of the above exception, another exception occurred:
-2024-06-14 12:57:18 | ERROR | stderr | 
-2024-06-14 12:57:18 | ERROR | stderr | Traceback (most recent call last):
-2024-06-14 12:57:18 | ERROR | stderr |   File "<frozen runpy>", line 198, in _run_module_as_main
-2024-06-14 12:57:18 | ERROR | stderr |   File "<frozen runpy>", line 88, in _run_code
-2024-06-14 12:57:18 | ERROR | stderr |   File "/home/c205/workspace/FastChat-main/fastchat/serve/model_worker.py", line 425, in <module>
-2024-06-14 12:57:18 | ERROR | stderr |     uvicorn.run(app, host=args.host, port=args.port, log_level="info")
-2024-06-14 12:57:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/main.py", line 577, in run
-2024-06-14 12:57:18 | ERROR | stderr |     server.run()
-2024-06-14 12:57:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
-2024-06-14 12:57:18 | ERROR | stderr |     return asyncio.run(self.serve(sockets=sockets))
-2024-06-14 12:57:18 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2024-06-14 12:57:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 190, in run
-2024-06-14 12:57:18 | ERROR | stderr |     return runner.run(main)
-2024-06-14 12:57:18 | ERROR | stderr |            ^^^^^^^^^^^^^^^^
-2024-06-14 12:57:18 | ERROR | stderr |   File "/home/c205/anaconda3/envs/fastchat/lib/python3.11/asyncio/runners.py", line 123, in run
-2024-06-14 12:57:18 | ERROR | stderr |     raise KeyboardInterrupt()
-2024-06-14 12:57:18 | ERROR | stderr | KeyboardInterrupt
